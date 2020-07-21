@@ -1,0 +1,8 @@
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+
+.dropdown-item {
+    color: white;
+}
