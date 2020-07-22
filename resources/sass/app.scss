@@ -222,3 +222,41 @@ a[data-toggle="collapse"] {
         transform: translateX(50%);
     }
 }
+
+// CONTENT SECTION
+.content {
+    width: 100%;
+    padding: 16px;
+}
+
+.container {
+    margin-top: 4rem!important;
+}
+
+.container.row {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+}
+
+th tr td {
+    text-align: center;
+}
+
+.action-col {
+    text-align: center;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.page-link {
+    padding: .75rem 1.5rem;
+    color: #17a2b8;
+}

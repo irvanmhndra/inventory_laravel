@@ -18,7 +18,7 @@
 <body>
   <div class="wrapper">
     <!-- Sidebar  -->
-    <nav id="sidebar">
+    <nav class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h3>Nama Toko</h3>
         <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -70,8 +70,10 @@
     </nav>
 
     <!-- Page Content  -->
-    <div id="content">
-      {{-- @yield('container') --}}
+    <div class="content" id="content">
+      <div class="container">
+        @yield('container')
+      </div>
     </div>
   </div>
 

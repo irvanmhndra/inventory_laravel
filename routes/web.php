@@ -21,6 +21,8 @@ Route::get('/', function () {
     return view('product');
 });
 
+Route::resource('categories', 'CategoryController');
+
 Route::get('/payment', function () {
     return view('payment');
 });
