@@ -6,18 +6,18 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Tambah Kategori
+            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Edit Kategori
                     Produk</small>
             </h1>
             <hr>
-            <form action="{{url('categories')}}" method="post">
+            <form action="/categories/{{$category->id}}" method="post">
                 @csrf
-                @method('post')
+                @method('put')
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="name">Nama Kategori</label>
-                            <input class="form-control" type="text" name="name" id="name" value=""
+                            <input class="form-control" type="text" name="name" id="name" value="{{$category->name}}"
                                 placeholder="Masukkan Jenis/Tipe Barang" required>
                         </div>
                     </div>
