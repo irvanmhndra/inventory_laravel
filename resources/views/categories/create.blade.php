@@ -12,7 +12,7 @@
             <hr>
             <form action="{{url('categories')}}" method="post">
                 @csrf
-                @method()
+                @method('post')
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
