@@ -10,9 +10,9 @@
                 Kategori <small style="font-size: 18px">Produk</small>
             </h1>
             <hr>
-            <button type="button" class="btn btn-info">
+            <a href="{{ url('categories/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
-            </button>
+            </a>
             <table class="table table-striped mt-3">
                 <thead>
                     <tr>
@@ -27,15 +27,33 @@
                         <th scope="row">{{$category->id}}</th>
                         <td>{{$category->name}}</td>
                         <td class="action-col">
-                            <button type="button" class="btn btn-info">
+                            <a href="/categories/{{$category->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>
-                            </button>
-                            <button type="button" class="btn btn-info">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
+                            </a>
+                            <a href="/categories/{{$category->id}}/delete" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
-                            </button>
+                            </a>
+                            <!-- Modal -->
+                            <div id="confirmModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- konten modal-->
+                                    <div class="modal-content">
+                                        <!-- heading modal -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Konfirmasi Hapus</h4>
+                                        </div>
+                                        <!-- body modal -->
+                                        <div class="modal-body">
+                                            <p>Yakin ingin menghapus data ini?</p>
+                                        </div>
+                                        <!-- footer modal -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+                                            <a href="/categories/{{$category->id}}/delete" class="btn btn-danger" data-dismiss="modal">Ya</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     @endforeach

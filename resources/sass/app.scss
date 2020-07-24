@@ -28,6 +28,10 @@ p {
     color: #999;
 }
 
+i {
+    font-style: normal;
+}
+
 a,
 a:hover,
 a:focus {
@@ -259,4 +263,9 @@ th tr td {
 .page-link {
     padding: .75rem 1.5rem;
     color: #17a2b8;
+}
+
+.form-body {
+    display: flex;
+    box-sizing: border-box;
 }

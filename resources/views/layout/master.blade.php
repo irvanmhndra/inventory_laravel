@@ -45,6 +45,10 @@
           </ul>
         </li>
         <li>
+          <a href="/categories">
+            <i class="fas fa-briefcase mr-3"></i>
+            Categories
+          </a>
           <a href="#">
             <i class="fas fa-briefcase mr-3"></i>
             About
