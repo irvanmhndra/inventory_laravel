@@ -1,16 +1,16 @@
 @extends('layout.master')
 
-@section('title', 'Categories')
+@section('title', 'Discounts')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
             <h1 class="text-center" style="font-size: 20px">
-                Kategori <small style="font-size: 18px">Produk</small>
+                Diskon <small style="font-size: 18px">Produk</small>
             </h1>
             <hr>
-            <a href="{{ url('categories/create') }}" class="btn btn-info">
+            <a href="{{ url('discounts/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
             </a>
             <table class="table table-striped mt-3">
@@ -18,19 +18,21 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
                         <th scope="col" class="action-col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categories as $category)
+                    @foreach ($discounts as $discount)
                     <tr>
-                        <th scope="row">{{$category->id}}</th>
-                        <td>{{$category->name}}</td>
+                        <th scope="row">{{$discount->id}}</th>
+                        <td>{{$discount->name}}</td>
+                        <td>{{$discount->amount}} %</td>
                         <td class="action-col">
-                            <a href="/categories/{{$category->id}}/edit" class="btn btn-info">
+                            <a href="/discounts/{{$discount->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="/categories/{{$category->id}}/delete" class="btn btn-danger">
+                            <a href="/discounts/{{$discount->id}}/delete" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                             <!-- Modal -->
@@ -49,7 +51,7 @@
                                         <!-- footer modal -->
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-                                            <a href="/categories/{{$category->id}}/delete" class="btn btn-danger" data-dismiss="modal">Ya</a>
+                                            <a href="/discounts/{{$discount->id}}/delete" class="btn btn-danger" data-dismiss="modal">Ya</a>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +61,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{$categories->links()}}
+            {{$discounts->links()}}
         </div>
     </div>
 </div>

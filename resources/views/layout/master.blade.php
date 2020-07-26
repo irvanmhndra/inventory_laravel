@@ -29,7 +29,7 @@
       <ul class="list-unstyled components">
         <li>
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-            <i class="fas fa-home mr-3"></i>
+            <i class="fas fa-home"></i>
             Home
           </a>
           <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -46,15 +46,15 @@
         </li>
         <li>
           <a href="/categories">
-            <i class="fas fa-briefcase mr-3"></i>
+            <i class="fas fa-tags"></i>
             Categories
           </a>
-          <a href="#">
-            <i class="fas fa-briefcase mr-3"></i>
-            About
+          <a href="/discounts">
+            <i class="fas fa-percent"></i>
+            Discounts
           </a>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-            <i class="fas fa-copy mr-3"></i>
+            <i class="fas fa-copy"></i>
             Pages
           </a>
           <ul class="collapse list-unstyled" id="pageSubmenu">

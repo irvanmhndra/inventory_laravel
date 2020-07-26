@@ -21,8 +21,12 @@ Route::get('/', function () {
     return view('product');
 });
 
-Route::resource('categories', 'CategoryController')->except(['destroy']);
+Route::resources([
+    'categories' => 'CategoryController',
+    'discounts' => 'DiscountController',
+]);
 Route::get('/categories/{id}/delete', 'CategoryController@destroy');
+Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
 
 Route::get('/payment', function () {
     return view('payment');
