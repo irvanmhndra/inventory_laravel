@@ -4,12 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Sizechart extends Model
 {
     public $timestamps = false;
-    protected $table = "categories";
+    protected $table = "sizecharts";
 
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'size',
+        'desc'
+    ];
 
     public function products()
     {

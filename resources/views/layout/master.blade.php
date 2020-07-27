@@ -45,13 +45,21 @@
           </ul>
         </li>
         <li>
+        <a href="/products">
+            <i class="fas fa-briefcase mr-3"></i>
+            Product
+          </a>
           <a href="/categories">
             <i class="fas fa-briefcase mr-3"></i>
             Categories
           </a>
-          <a href="#">
+          <a href="/sizecharts">
             <i class="fas fa-briefcase mr-3"></i>
-            About
+            Sizechart
+          </a>
+          <a href="/customers">
+            <i class="fas fa-briefcase mr-3"></i>
+            Customers
           </a>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
             <i class="fas fa-copy mr-3"></i>
