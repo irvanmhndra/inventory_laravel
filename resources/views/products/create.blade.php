@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label for="size">Ukuran</label>
-                            <select class="form-control" type="" name="sizep_id" id="size_id" value="" placeholder="Pilih Ukuran" required>
+                            <select class="form-control" type="" name="size_id" id="size_id" value="" placeholder="Pilih Ukuran" required>
                                 @foreach ($sizes as $size)
                                 <option value="{{$size->id}}">{{$size->size}} ({{$size->desc}})</option>
                                 @endforeach
