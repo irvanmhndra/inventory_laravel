@@ -26,9 +26,9 @@
                             <input class="form-control" type="text" name="desc" id="desc" value=""
                                 placeholder="Masukkan Deskripsi Produk" required>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <div class="form-group text-right mt-4">
-                            <a href="/sizecharts" class="btn btn-warning text-white">
+                            <a href="/categories" class="btn btn-warning text-white">
                                 <i class="material-icons">Kembali</i>
                             </a>
                             <button class="btn btn-primary" type="submit" name="submit" id="btnSubmit">

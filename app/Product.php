@@ -20,4 +20,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Sizechart');
     }
+
+    public function purchases()
+    {
+        return $this->hasMany('App\Purchase');
+    }
 }

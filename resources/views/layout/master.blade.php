@@ -61,6 +61,14 @@
             <i class="fas fa-briefcase mr-3"></i>
             Customers
           </a>
+          <a href="/purchases">
+            <i class="fas fa-briefcase mr-3"></i>
+            Purchases
+          </a>
+          <a href="/discounts">
+            <i class="fas fa-briefcase mr-3"></i>
+            Discounts
+          </a>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
             <i class="fas fa-copy mr-3"></i>
             Pages

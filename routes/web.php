@@ -36,3 +36,9 @@ Route::get('/customers/{id}/delete', 'CustomerController@destroy');
 
 Route::resource('products', 'ProductController')->except(['destroy']);
 Route::get('/products/{id}/delete', 'ProductController@destroy');
+
+Route::resource('purchases', 'PurchaseController')->except(['destroy']);
+Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
+
+Route::resource('discounts', 'DiscountController')->except(['destroy']);
+Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
