@@ -24,25 +24,14 @@ Route::get('/', function () {
 Route::resources([
     'categories' => 'CategoryController',
     'discounts' => 'DiscountController',
+    'sizecharts' => 'SizechartController',
+    'customers' => 'CustomerController',
+    'products' => 'ProductController',
+    'purchases' => 'PurchaseController',
 ]);
 Route::get('/categories/{id}/delete', 'CategoryController@destroy');
 Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
-
-Route::get('/payment', function () {
-    return view('payment');
-});
-
-Route::resource('sizecharts', 'SizechartController')->except(['destroy']);
 Route::get('/sizecharts/{id}/delete', 'SizechartController@destroy');
-
-Route::resource('customers', 'CustomerController')->except(['destroy']);
 Route::get('/customers/{id}/delete', 'CustomerController@destroy');
-
-Route::resource('products', 'ProductController')->except(['destroy']);
 Route::get('/products/{id}/delete', 'ProductController@destroy');
-
-Route::resource('purchases', 'PurchaseController')->except(['destroy']);
 Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
-
-Route::resource('discounts', 'DiscountController')->except(['destroy']);
-Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
