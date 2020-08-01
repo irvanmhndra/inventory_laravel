@@ -21,6 +21,13 @@ Route::get('/', function () {
     return view('product');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
+});
+
 Route::resources([
     'categories' => 'CategoryController',
     'discounts' => 'DiscountController',
