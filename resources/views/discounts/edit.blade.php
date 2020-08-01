@@ -6,7 +6,8 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Edit Discount</small>
+            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Edit Diskon
+                    Produk</small>
             </h1>
             <hr>
             <form action="/discounts/{{$discount->id}}" method="post">
@@ -15,14 +16,14 @@
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="name">Nama Discount</label>
+                            <label for="name">Nama Diskon</label>
                             <input class="form-control" type="text" name="name" id="name" value="{{$discount->name}}"
-                                placeholder="Masukkan Jenis/Tipe Discount" required>
+                                placeholder="Masukkan Nama/Pengenal Diskon" required>
                         </div>
                         <div class="form-group">
-                            <label for="amount">Besaran Discount</label>
+                            <label for="name">Jumlah Diskon (%)</label>
                             <input class="form-control" type="text" name="amount" id="amount" value="{{$discount->amount}}"
-                                placeholder="Masukkan Besaran Discount (dalam %)" required>
+                                placeholder="Masukkan Jumlah Diskon dalam Presentase" required>
                         </div>
                     </div>
                     <div class="col-lg-6">

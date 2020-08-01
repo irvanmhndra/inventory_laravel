@@ -14,8 +14,7 @@ class DiscountController extends Controller
      */
     public function index()
     {
-        $discounts = Discount::paginate(10);
-        return \view('discounts.index', ['discounts' => $discounts]);
+        return \view('discounts.index', ['discounts' => Discount::paginate(10)]);
     }
 
     /**
@@ -52,7 +51,7 @@ class DiscountController extends Controller
      * @param  \App\Discount  $discount
      * @return \Illuminate\Http\Response
      */
-    public function show(Discount  $discount)
+    public function show(Discount $discount)
     {
         //
     }
@@ -60,10 +59,10 @@ class DiscountController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Discount  $discount
+     * @param  \App\Discount  $discount
      * @return \Illuminate\Http\Response
      */
-    public function edit(Discount  $discount)
+    public function edit(Discount $discount)
     {
         return \view('discounts.edit', ['discount' => $discount]);
     }
@@ -75,7 +74,7 @@ class DiscountController extends Controller
      * @param  \App\Discount  $discount
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Discount  $discount)
+    public function update(Request $request, Discount $discount)
     {
         $discount->update($request->all());
         return \redirect('/discounts');
@@ -84,7 +83,7 @@ class DiscountController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Discount $discount
+     * @param  \App\Discount  $discount
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

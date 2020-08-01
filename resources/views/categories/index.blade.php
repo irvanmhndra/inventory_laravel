@@ -17,7 +17,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Nama</th>
                         <th scope="col" class="action-col">Action</th>
                     </tr>
                 </thead>

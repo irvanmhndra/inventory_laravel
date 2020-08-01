@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-body">
             <h1 class="text-center" style="font-size: 20px">
-                Kategori <small style="font-size: 18px">Discount</small>
+                Diskon <small style="font-size: 18px">Produk</small>
             </h1>
             <hr>
             <a href="{{ url('discounts/create') }}" class="btn btn-info">
@@ -17,8 +17,8 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Amount</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
                         <th scope="col" class="action-col">Action</th>
                     </tr>
                 </thead>
@@ -27,7 +27,7 @@
                     <tr>
                         <th scope="row">{{$discount->id}}</th>
                         <td>{{$discount->name}}</td>
-                        <td>{{$discount->amount}}</td>
+                        <td>{{$discount->amount}} %</td>
                         <td class="action-col">
                             <a href="/discounts/{{$discount->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>

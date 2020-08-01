@@ -6,7 +6,8 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Discount</small>
+            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Tambah Daftar Diskon
+                    Produk</small>
             </h1>
             <hr>
             <form action="/discounts" method="post">
