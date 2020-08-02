@@ -43,12 +43,21 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        $request->validate([
+            'email' => 'required|max:255|email',
+            'password' => 'required',
+        ]);
+
         if (Auth::attempt($request->only('email', 'password'))) {
-            // $user = User::where('email', $request->email)->first();
             return \redirect('/')->with('sukses', 'Anda berhasil login');
+        } else {
+            $user = User::where('email', $request->email)->first();
+            if ($user) {
+                return \redirect('/login')->withErrors('Email/Password tidak sesuai.');
+            }
         }
 
-        return redirect('/login')->withErrors('Gagal Login');
+        return redirect('/login')->withErrors('User/Email belum terdaftar di sistem.');
     }
 
     public function showLoginForm()

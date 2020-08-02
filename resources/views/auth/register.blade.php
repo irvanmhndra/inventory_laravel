@@ -16,17 +16,17 @@
         </div>
     </div>
     <div class="main">
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <div class="col-md-6 col-sm-12">
             <div class="login-form">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form action="register" method="POST">
                     @csrf
                     <div class="form-group">
