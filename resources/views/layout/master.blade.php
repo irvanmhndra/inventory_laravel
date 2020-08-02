@@ -84,6 +84,10 @@
               <a href="#">Page 3</a>
             </li>
           </ul>
+          <a href="/logout">
+            <i class="fas fa-briefcase mr-3"></i>
+            Logout
+          </a>
         </li>
       </ul>
 

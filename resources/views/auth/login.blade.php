@@ -16,16 +16,27 @@
         </div>
     </div>
     <div class="main">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+
         <div class="col-md-6 col-sm-12">
             <div class="login-form">
-                <form>
+                <form action="/login" method="POST">
+                    @csrf
                     <div class="form-group">
-                        <label>User Name</label>
-                        <input type="text" class="form-control" placeholder="User Name">
+                        <label>Email</label>
+                        <input type="text" class="form-control" placeholder="Email" name="email">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
                     <button type="submit" class="btn btn-info">Login</button>
                     <a href="/register" class="btn btn-secondary">Register</a>

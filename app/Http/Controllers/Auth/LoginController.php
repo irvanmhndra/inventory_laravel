@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -42,17 +43,23 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        dd('login');
+        if (Auth::attempt($request->only('email', 'password'))) {
+            $user = User::where('email', $request->email)->first();
+            return \redirect('/')->with('sukses', 'Anda berhasil login');
+        }
+
+        return redirect('/login')->withErrors('Gagal Login');
     }
 
     public function showLoginForm()
     {
-        \dd('show login form');
+        return \view('auth.login');
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
-        \dd('logout');
+        Auth::logout();
+        return \redirect('/login');
     }
 
     /**
