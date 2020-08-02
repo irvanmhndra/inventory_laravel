@@ -44,7 +44,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         if (Auth::attempt($request->only('email', 'password'))) {
-            $user = User::where('email', $request->email)->first();
+            // $user = User::where('email', $request->email)->first();
             return \redirect('/')->with('sukses', 'Anda berhasil login');
         }
 
