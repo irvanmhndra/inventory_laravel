@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,13 +22,6 @@ Route::get('/', function () {
     return view('product');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/register', function () {
-    return view('register');
-});
-
 Route::resources([
     'categories' => 'CategoryController',
     'discounts' => 'DiscountController',
@@ -42,3 +36,7 @@ Route::get('/sizecharts/{id}/delete', 'SizechartController@destroy');
 Route::get('/customers/{id}/delete', 'CustomerController@destroy');
 Route::get('/products/{id}/delete', 'ProductController@destroy');
 Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
