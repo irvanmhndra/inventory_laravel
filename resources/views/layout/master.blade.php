@@ -28,11 +28,12 @@
 
       <ul class="list-unstyled components">
         <li>
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          {{-- <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> --}}
+          <a href="/">
             <i class="fas fa-home"></i>
-            Home
+            Dashboard
           </a>
-          <ul class="collapse list-unstyled" id="homeSubmenu">
+          {{-- <ul class="collapse list-unstyled" id="homeSubmenu">
             <li>
               <a href="#">Home 1</a>
             </li>
@@ -42,38 +43,42 @@
             <li>
               <a href="#">Home 3</a>
             </li>
-          </ul>
+          </ul> --}}
         </li>
         <li>
-        <a href="/products">
-            <i class="fas fa-briefcase mr-3"></i>
-            Product
+          <a href="/products">
+            <i class="fas fa-box"></i>
+            Products
           </a>
           <a href="/categories">
             <i class="fas fa-tags"></i>
             Categories
           </a>
           <a href="/sizecharts">
-            <i class="fas fa-briefcase mr-3"></i>
+            <i class="fas fa-list-ol"></i>
             Sizechart
           </a>
           <a href="/customers">
-            <i class="fas fa-briefcase mr-3"></i>
+            <i class="fas fa-user-friends"></i>
             Customers
           </a>
+          <a href="/payments">
+            <i class="fas fa-cash-register"></i>
+            Payments
+          </a>
           <a href="/purchases">
-            <i class="fas fa-briefcase mr-3"></i>
+            <i class="fas fa-shopping-cart"></i>
             Purchases
           </a>
           <a href="/discounts">
-            <i class="fas fa-briefcase mr-3"></i>
+            <i class="fas fa-percent"></i>
             Discounts
           </a>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          {{-- <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
             <i class="fas fa-copy"></i>
             Pages
-          </a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
+          </a> --}}
+          {{-- <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
               <a href="#">Page 1</a>
             </li>
@@ -83,9 +88,9 @@
             <li>
               <a href="#">Page 3</a>
             </li>
-          </ul>
+          </ul> --}}
           <a href="/logout">
-            <i class="fas fa-briefcase mr-3"></i>
+            <i class="fas fa-power-off"></i>
             Logout
           </a>
         </li>
