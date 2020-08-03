@@ -6,7 +6,7 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Product</h1>
+            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
             <hr>
             <a href="{{ url('purchases/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
@@ -25,9 +25,9 @@
                     @foreach ($purchases as $purchase)
                     <tr>
                         <th scope="row">{{$purchase->id}}</th>
-                        <td>{{$purchase->category->name}}</td>
+                        <td>{{$purchase->product->category->name}}</td>
                         <td>{{$purchase->price}}</td>
-                        <td>{{$purchase->quantitiy}}</td>
+                        <td>{{$purchase->quantity}}</td>
                         <td class="action-col">
                             <a href="/purchases/{{$purchase->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>

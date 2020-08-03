@@ -32,7 +32,6 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $sizes = Sizechart::all();
-        //dd($sizes);
         return \view('products.create', ['categories' => $categories, 'sizes' => $sizes]);
     }
 
@@ -79,7 +78,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return \view('products.edit', ['product' => $product]);
+        $categories = Category::all();
+        $sizes = Sizechart::all();
+        return \view('products.edit', ['categories' => $categories, 'sizes' => $sizes, 'product' => $product]);
     }
 
     /**

@@ -37,10 +37,10 @@
                         <td>{{$product->depth}}</td>
                         <td>{{$product->lin}}</td>
                         <td class="action-col">
-                            <a href="/categories/{{$product->id}}/edit" class="btn btn-info">
+                            <a href="/products/{{$product->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="/categories/{{$product->id}}/delete" class="btn btn-danger">
+                            <a href="/products/{{$product->id}}/delete" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                             <!-- Modal -->

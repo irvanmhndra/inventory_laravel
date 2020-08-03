@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label for="name">Deskripsi</label>
-                            <input class="form-control" type="text" name="desc" id="size" value=""
+                            <input class="form-control" type="text" name="desc" id="size" value="{{$sizechart->desc}}"
                                 placeholder="Masukkan Deskripsi" required>
                         </div>
                     </div>

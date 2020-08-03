@@ -40,8 +40,8 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
+        $request->validate([
+            'product_id' => 'required',
             'price' => 'required',
             'quantity' => 'required'
         ]);
@@ -70,7 +70,8 @@ class PurchaseController extends Controller
      */
     public function edit(Purchase  $purchase)
     {
-        return \view('purchases.edit', ['purchase' => $purchase]);
+        $products = Product::all();
+        return \view('purchases.edit', ['purchase' => $purchase, 'products' => $products ]);
     }
 
     /**

@@ -26,7 +26,7 @@
                                 placeholder="Masukkan Nomor Telepon" required>
                         </div>
                         <div class="form-group">
-                            <label for="address">Nomor Telepon</label>
+                            <label for="address">Alamat</label>
                             <input class="form-control" type="text" name="address" id="address" value=""
                                 placeholder="Masukkan Alamat" required>
                         </div>
