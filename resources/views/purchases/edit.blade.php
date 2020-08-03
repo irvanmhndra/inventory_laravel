@@ -1,13 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Purchases')
+@section('title', 'Pembelian')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Purchases</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
             <hr>
             <form action="/purchases" method="post">
                 @csrf
@@ -28,11 +27,12 @@
                             <label for="price">Harga</label>
                             <input class="form-control" type="text" name="price" id="price" value="{{$purchase->price}}" placeholder="Masukkan Harga Produk" required>
                         </div>
+                    </div>
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <label for="quantity">Jumlah</label>
                             <input class="form-control" type="text" name="quantity" id="quantity" value="{{$purchase->quantity}}" placeholder="Masukkan Jumlah Produk" required>
-                    </div>
-                    <div class="col-lg-6">
+                        </div>
                         <div class="form-group text-right mt-4">
                             <a href="/products" class="btn btn-warning text-white">
                                 <i class="material-icons">Kembali</i>

@@ -1,14 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Categories')
+@section('title', 'Kategori')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Edit Kategori
-                    Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Edit Kategori Produk</h1>
             <hr>
             <form action="/categories/{{$category->id}}" method="post">
                 @csrf
@@ -18,7 +16,7 @@
                         <div class="form-group">
                             <label for="name">Nama Kategori</label>
                             <input class="form-control" type="text" name="name" id="name" value="{{$category->name}}"
-                                placeholder="Masukkan Jenis/Tipe Barang" required>
+                                placeholder="Masukkan Jenis/Tipe Produk" required>
                         </div>
                     </div>
                     <div class="col-lg-6">

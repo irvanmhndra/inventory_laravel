@@ -47,27 +47,27 @@
         <li>
         <a href="/products">
             <i class="fas fa-briefcase mr-3"></i>
-            Product
+            Produk
           </a>
           <a href="/categories">
             <i class="fas fa-tags"></i>
-            Categories
+            Kategori
           </a>
           <a href="/sizecharts">
             <i class="fas fa-briefcase mr-3"></i>
-            Sizechart
+            Ukuran
           </a>
           <a href="/customers">
             <i class="fas fa-briefcase mr-3"></i>
-            Customers
+            Customer
           </a>
           <a href="/purchases">
             <i class="fas fa-briefcase mr-3"></i>
-            Purchases
+            Pembelian
           </a>
           <a href="/discounts">
             <i class="fas fa-briefcase mr-3"></i>
-            Discounts
+            Diskon
           </a>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
             <i class="fas fa-copy"></i>

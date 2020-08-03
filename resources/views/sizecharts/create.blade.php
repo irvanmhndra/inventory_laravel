@@ -1,14 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Size Chart')
+@section('title', 'Ukuran')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM
-            <small style="font-size: 18px">Tambah Sizechart Barang</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Tambah Ukuran Produk</h1>
             <hr>
             <form action="/sizecharts" method="post">
                 @csrf
@@ -24,7 +22,7 @@
                     <div class="col-lg-4">
                     <label for="name">Deskripsi</label>
                             <input class="form-control" type="text" name="desc" id="desc" value=""
-                                placeholder="Masukkan Deskripsi Produk" required>
+                                placeholder="Contoh: 13 x 20" required>
                     </div>
                     <div class="col-lg-3">
                         <div class="form-group text-right mt-4">

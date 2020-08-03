@@ -1,14 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Categories')
+@section('title', 'Kategori')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">
-                Kategori <small style="font-size: 18px">Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Kategori Produk</h1>
             <hr>
             <a href="{{ url('categories/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
@@ -18,7 +16,7 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nama</th>
-                        <th scope="col" class="action-col">Action</th>
+                        <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
                 <tbody>

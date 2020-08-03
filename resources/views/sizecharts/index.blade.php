@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Sizechart')
+@section('title', 'Ukuran')
 
 @section('container')
 <div class="row">
@@ -17,9 +17,9 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Size</th>
-                        <th scope="col">Description</th>
-                        <th scope="col" class="action-col">Action</th>
+                        <th scope="col">Ukuran</th>
+                        <th scope="col">Deskripsi</th>
+                        <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
                 <tbody>

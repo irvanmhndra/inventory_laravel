@@ -1,12 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Products')
+@section('title', 'Produk')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Product</h1>
+            <h1 class="text-center" style="font-size: 20px">Produk</h1>
             <hr>
             <a href="{{ url('products/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
@@ -15,14 +15,14 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Size</th>
-                        <th scope="col">Stock</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Depth</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Ukuran</th>
+                        <th scope="col">Stok</th>
+                        <th scope="col">Warna</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Kedalaman</th>
                         <th scope="col">Lin</th>
-                        <th scope="col" class="action-col">Action</th>
+                        <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
                 <tbody>
