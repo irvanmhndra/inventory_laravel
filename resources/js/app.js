@@ -2,6 +2,10 @@ require('./bootstrap');
 
 $(function () {
 
+    $('#navbarSupportedContent').on('click', function () {
+        $(this).removeClass("show");
+    });
+
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });

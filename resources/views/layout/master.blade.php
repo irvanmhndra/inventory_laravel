@@ -4,7 +4,7 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -16,94 +16,125 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- Sidebar  -->
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <h3>Nama Toko</h3>
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
-          <i class="fas fa-align-left"></i>
-        </button>
-      </div>
+  <!-- Sidebar  -->
+  <nav class="sidebar-lg" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Nama Toko</h3>
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-left"></i>
+      </button>
+    </div>
 
-      <ul class="list-unstyled components">
-        <li>
-          {{-- <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> --}}
+    <ul class="list-unstyled components">
+      <li>
+        <a href="/">
+          <i class="fas fa-home"></i>
+          Dashboard
+        </a>
+        <a href="/products">
+          <i class="fas fa-box"></i>
+          Products
+        </a>
+        <a href="/categories">
+          <i class="fas fa-tags"></i>
+          Categories
+        </a>
+        <a href="/sizecharts">
+          <i class="fas fa-list-ol"></i>
+          Sizechart
+        </a>
+        <a href="/customers">
+          <i class="fas fa-user-friends"></i>
+          Customers
+        </a>
+        <a href="/payments">
+          <i class="fas fa-cash-register"></i>
+          Payments
+        </a>
+        <a href="/purchases">
+          <i class="fas fa-shopping-cart"></i>
+          Purchases
+        </a>
+        <a href="/discounts">
+          <i class="fas fa-percent"></i>
+          Discounts
+        </a>
+        <a href="/logout">
+          <i class="fas fa-power-off"></i>
+          Logout
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">WebName</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
           <a href="/">
             <i class="fas fa-home"></i>
             Dashboard
           </a>
-          {{-- <ul class="collapse list-unstyled" id="homeSubmenu">
-            <li>
-              <a href="#">Home 1</a>
-            </li>
-            <li>
-              <a href="#">Home 2</a>
-            </li>
-            <li>
-              <a href="#">Home 3</a>
-            </li>
-          </ul> --}}
         </li>
-        <li>
+        <li class="nav-item">
           <a href="/products">
             <i class="fas fa-box"></i>
             Products
           </a>
+        </li>
+        <li class="nav-item">
           <a href="/categories">
             <i class="fas fa-tags"></i>
             Categories
           </a>
+        </li>
+        <li class="nav-item">
           <a href="/sizecharts">
             <i class="fas fa-list-ol"></i>
             Sizechart
           </a>
+        </li>
+        <li class="nav-item">
           <a href="/customers">
             <i class="fas fa-user-friends"></i>
             Customers
           </a>
+        </li>
+        <li class="nav-item">
           <a href="/payments">
             <i class="fas fa-cash-register"></i>
             Payments
           </a>
+        </li>
+        <li class="nav-item">
           <a href="/purchases">
             <i class="fas fa-shopping-cart"></i>
             Purchases
           </a>
+        </li>
+        <li class="nav-item">
           <a href="/discounts">
             <i class="fas fa-percent"></i>
             Discounts
           </a>
-          {{-- <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-            <i class="fas fa-copy"></i>
-            Pages
-          </a> --}}
-          {{-- <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-              <a href="#">Page 1</a>
-            </li>
-            <li>
-              <a href="#">Page 2</a>
-            </li>
-            <li>
-              <a href="#">Page 3</a>
-            </li>
-          </ul> --}}
+        </li>
+        <li class="nav-item">
           <a href="/logout">
             <i class="fas fa-power-off"></i>
             Logout
           </a>
         </li>
       </ul>
-
-    </nav>
-
-    <!-- Page Content  -->
-    <div class="content" id="content">
-      <div class="container">
-        @yield('container')
-      </div>
     </div>
+  </nav>
+  <div class="content">
+    @yield('container')
   </div>
 
   {{-- <div class="row no-gutters">

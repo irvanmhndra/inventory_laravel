@@ -37277,6 +37277,9 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 $(function () {
+  $('#navbarSupportedContent').on('click', function () {
+    $(this).removeClass("show");
+  });
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');
   });
