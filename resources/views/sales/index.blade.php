@@ -1,12 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Pembelian')
+@section('title', 'Penjualan')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
+            <h1 class="text-center" style="font-size: 20px">Penjualan</h1>
             <hr>
             <a href="{{ url('sales/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>

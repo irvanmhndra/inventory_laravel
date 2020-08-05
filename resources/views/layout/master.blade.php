@@ -33,31 +33,31 @@
         </a>
         <a href="/products">
           <i class="fas fa-box"></i>
-          Products
+          Produk
         </a>
         <a href="/categories">
           <i class="fas fa-tags"></i>
-          Categories
+          Kategori
         </a>
         <a href="/sizecharts">
           <i class="fas fa-list-ol"></i>
-          Sizechart
+          Daftar Ukuran
         </a>
         <a href="/customers">
           <i class="fas fa-user-friends"></i>
-          Customers
+          Pelanggan
         </a>
         <a href="/sales">
           <i class="fas fa-cash-register"></i>
-          Sales
+          Penjualan
         </a>
         <a href="/purchases">
           <i class="fas fa-shopping-cart"></i>
-          Purchases
+          Pembelian
         </a>
         <a href="/discounts">
           <i class="fas fa-percent"></i>
-          Discounts
+          Diskon
         </a>
         <a href="/logout">
           <i class="fas fa-power-off"></i>

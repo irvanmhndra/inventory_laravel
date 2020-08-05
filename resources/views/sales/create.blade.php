@@ -15,7 +15,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="due_date">Batas Waktu Pembayaran</label>
-                            <input class="form-control" type="text" name="due_date" id="due_date" value="" placeholder="Masukkan Batas Waktu Pembayaran" required>
+                            <input class="form-control" type="date" name="due_date" id="due_date" value="" placeholder="Masukkan Batas Waktu Pembayaran" required>
                         </div>
                         <div class="form-group">
                             <label for="type">Jenis Pembayaran</label>
