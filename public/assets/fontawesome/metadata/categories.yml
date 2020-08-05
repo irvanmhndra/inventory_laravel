@@ -1894,7 +1894,7 @@ objects:
     - wine-glass
     - wrench
   label: Objects
-payments-shopping:
+sales-shopping:
   icons:
     - alipay
     - amazon-pay
@@ -1943,7 +1943,7 @@ payments-shopping:
     - thumbs-down
     - thumbs-up
     - trophy
-  label: Payments & Shopping
+  label: Sales & Shopping
 pharmacy:
   icons:
     - band-aid

@@ -1,14 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Discounts')
+@section('title', 'Diskon')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Tambah Daftar Diskon
-                    Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Tambah Diskon Produk</h1>
             <hr>
             <form action="/discounts" method="post">
                 @csrf
@@ -16,17 +14,17 @@
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="name">Nama Discount</label>
+                            <label for="name">Nama Diskon</label>
                             <input class="form-control" type="text" name="name" id="name" value=""
                                 placeholder="Masukkan Jenis/Tipe Discount" required>
                         </div>
+                    </div>
+                    <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="amount">Besaran Discount</label>
+                            <label for="amount">Besaran Diskon</label>
                             <input class="form-control" type="text" name="amount" id="amount" value=""
                                 placeholder="Masukkan Besaran Diskon (dalam %)" required>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
                         <div class="form-group text-right mt-4">
                             <a href="/discounts" class="btn btn-warning text-white">
                                 <i class="material-icons">Kembali</i>

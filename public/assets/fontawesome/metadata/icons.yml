@@ -3151,7 +3151,7 @@ cash-register:
       - leaerboard
       - machine
       - pay
-      - payment
+      - sale
       - purchase
       - store
   styles:
@@ -5006,7 +5006,7 @@ credit-card:
       - credit-card-alt
       - debit
       - money
-      - payment
+      - sale
       - purchase
   styles:
     - solid
@@ -7215,7 +7215,7 @@ file-invoice:
       - bill
       - charge
       - document
-      - payment
+      - sale
       - receipt
   styles:
     - solid
@@ -7235,7 +7235,7 @@ file-invoice-dollar:
       - document
       - dollar-sign
       - money
-      - payment
+      - sale
       - receipt
       - usd
   styles:
@@ -12889,7 +12889,7 @@ money-bill:
       - cash
       - checkout
       - money
-      - payment
+      - sale
       - price
       - purchase
   styles:
@@ -12907,7 +12907,7 @@ money-bill-alt:
       - cash
       - checkout
       - money
-      - payment
+      - sale
       - price
       - purchase
   styles:
@@ -12925,7 +12925,7 @@ money-bill-wave:
       - cash
       - checkout
       - money
-      - payment
+      - sale
       - price
       - purchase
   styles:
@@ -12942,7 +12942,7 @@ money-bill-wave-alt:
       - cash
       - checkout
       - money
-      - payment
+      - sale
       - price
       - purchase
   styles:
@@ -12960,7 +12960,7 @@ money-check:
       - checkout
       - cheque
       - money
-      - payment
+      - sale
       - price
       - purchase
   styles:
@@ -12978,7 +12978,7 @@ money-check-alt:
       - checkout
       - cheque
       - money
-      - payment
+      - sale
       - price
       - purchase
   styles:
@@ -16355,7 +16355,7 @@ shopping-bag:
       - buy
       - checkout
       - grocery
-      - payment
+      - sale
       - purchase
   styles:
     - solid
@@ -16371,7 +16371,7 @@ shopping-basket:
       - buy
       - checkout
       - grocery
-      - payment
+      - sale
       - purchase
   styles:
     - solid
@@ -16387,7 +16387,7 @@ shopping-cart:
       - buy
       - checkout
       - grocery
-      - payment
+      - sale
       - purchase
   styles:
     - solid

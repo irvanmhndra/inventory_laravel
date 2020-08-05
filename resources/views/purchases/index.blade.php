@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Purchases')
+@section('title', 'Pembelian')
 
 @section('container')
 <div class="row">
@@ -18,7 +18,7 @@
                         <th scope="col">Nama Produk</th>
                         <th scope="col">Harga</th>
                         <th scope="col">Jumlah</th>
-                        <th scope="col" class="action-col">Action</th>
+                        <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
                 <tbody>

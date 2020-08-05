@@ -14,7 +14,7 @@
                 @csrf
                 @method('post')
                 <div class="form-body">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <label for="name">Nama</label>
                             <input class="form-control" type="text" name="name" id="name" value=""
@@ -25,13 +25,13 @@
                             <input class="form-control" type="text" name="phoneNumber" id="phoneNumber" value=""
                                 placeholder="Masukkan Nomor Telepon" required>
                         </div>
+                    </div>
+                    <div class="col-lg-6">
                         <div class="form-group">
                             <label for="address">Alamat</label>
                             <input class="form-control" type="text" name="address" id="address" value=""
                                 placeholder="Masukkan Alamat" required>
                         </div>
-                    </div>
-                    <div class="col-lg-2">
                         <div class="form-group text-right mt-4">
                             <a href="/customers" class="btn btn-warning text-white">
                                 <i class="material-icons">Kembali</i>

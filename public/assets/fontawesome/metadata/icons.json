@@ -8321,7 +8321,7 @@
         "leaerboard",
         "machine",
         "pay",
-        "payment",
+        "sale",
         "purchase",
         "store"
       ]
@@ -13209,7 +13209,7 @@
         "credit-card-alt",
         "debit",
         "money",
-        "payment",
+        "sale",
         "purchase"
       ]
     },
@@ -19143,7 +19143,7 @@
         "bill",
         "charge",
         "document",
-        "payment",
+        "sale",
         "receipt"
       ]
     },
@@ -19187,7 +19187,7 @@
         "document",
         "dollar-sign",
         "money",
-        "payment",
+        "sale",
         "receipt",
         "usd"
       ]
@@ -34671,7 +34671,7 @@
         "cash",
         "checkout",
         "money",
-        "payment",
+        "sale",
         "price",
         "purchase"
       ]
@@ -34713,7 +34713,7 @@
         "cash",
         "checkout",
         "money",
-        "payment",
+        "sale",
         "price",
         "purchase"
       ]
@@ -34769,7 +34769,7 @@
         "cash",
         "checkout",
         "money",
-        "payment",
+        "sale",
         "price",
         "purchase"
       ]
@@ -34810,7 +34810,7 @@
         "cash",
         "checkout",
         "money",
-        "payment",
+        "sale",
         "price",
         "purchase"
       ]
@@ -34852,7 +34852,7 @@
         "checkout",
         "cheque",
         "money",
-        "payment",
+        "sale",
         "price",
         "purchase"
       ]
@@ -34894,7 +34894,7 @@
         "checkout",
         "cheque",
         "money",
-        "payment",
+        "sale",
         "price",
         "purchase"
       ]
@@ -43967,7 +43967,7 @@
         "buy",
         "checkout",
         "grocery",
-        "payment",
+        "sale",
         "purchase"
       ]
     },
@@ -44007,7 +44007,7 @@
         "buy",
         "checkout",
         "grocery",
-        "payment",
+        "sale",
         "purchase"
       ]
     },
@@ -44047,7 +44047,7 @@
         "buy",
         "checkout",
         "grocery",
-        "payment",
+        "sale",
         "purchase"
       ]
     },

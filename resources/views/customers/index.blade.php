@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Customers')
+@section('title', 'Customer')
 
 @section('container')
 <div class="row">
@@ -20,7 +20,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Phone Number</th>
                         <th scope="col">Address</th>
-                        <th scope="col" class="action-col">Action</th>
+                        <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
                 <tbody>

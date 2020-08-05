@@ -31,10 +31,12 @@ Route::middleware('auth')->group(function () {
         'customers' => 'CustomerController',
         'products' => 'ProductController',
         'purchases' => 'PurchaseController',
+        'sales' => 'SaleController',
     ]);
     Route::get('/categories/{id}/delete', 'CategoryController@destroy');
     Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
     Route::get('/sizecharts/{id}/delete', 'SizechartController@destroy');
+    Route::get('/sales/{id}/delete', 'SaleController@destroy');
     Route::get('/customers/{id}/delete', 'CustomerController@destroy');
     Route::get('/products/{id}/delete', 'ProductController@destroy');
     Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');

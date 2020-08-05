@@ -47,9 +47,9 @@
           <i class="fas fa-user-friends"></i>
           Customers
         </a>
-        <a href="/payments">
+        <a href="/sales">
           <i class="fas fa-cash-register"></i>
-          Payments
+          Sales
         </a>
         <a href="/purchases">
           <i class="fas fa-shopping-cart"></i>
@@ -85,43 +85,43 @@
         <li class="nav-item">
           <a href="/products">
             <i class="fas fa-box"></i>
-            Products
+            Produk
           </a>
         </li>
         <li class="nav-item">
           <a href="/categories">
             <i class="fas fa-tags"></i>
-            Categories
+            Kategori
           </a>
         </li>
         <li class="nav-item">
           <a href="/sizecharts">
             <i class="fas fa-list-ol"></i>
-            Sizechart
+            Daftar Ukuran
           </a>
         </li>
         <li class="nav-item">
           <a href="/customers">
             <i class="fas fa-user-friends"></i>
-            Customers
+            Pelanggan
           </a>
         </li>
         <li class="nav-item">
-          <a href="/payments">
+          <a href="/sales">
             <i class="fas fa-cash-register"></i>
-            Payments
+            Penjualan
           </a>
         </li>
         <li class="nav-item">
           <a href="/purchases">
             <i class="fas fa-shopping-cart"></i>
-            Purchases
+            Pembelian
           </a>
         </li>
         <li class="nav-item">
           <a href="/discounts">
             <i class="fas fa-percent"></i>
-            Discounts
+            Diskon
           </a>
         </li>
         <li class="nav-item">

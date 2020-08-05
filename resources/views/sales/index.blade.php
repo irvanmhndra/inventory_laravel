@@ -1,38 +1,40 @@
 @extends('layout.master')
 
-@section('title', 'Ukuran')
+@section('title', 'Pembelian')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">
-                Ukuran <small style="font-size: 18px">Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
             <hr>
-            <a href="{{ url('sizecharts/create') }}" class="btn btn-info">
+            <a href="{{ url('sales/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
             </a>
             <table class="table table-striped mt-3">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Ukuran</th>
-                        <th scope="col">Deskripsi</th>
+                        <th scope="col">Batas Waktu Pembayaran</th>
+                        <th scope="col">Jenis Pembayaran</th>
+                        <th scope="col">Total Pembayaran</th>
+                        <th scope="col">Status Pembayaran</th>
                         <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($sizecharts as $sizechart)
+                    @foreach ($sales as $sale)
                     <tr>
-                        <th scope="row">{{$sizechart->id}}</th>
-                        <td>{{$sizechart->size}}</td>
-                        <td>{{$sizechart->desc}}</td>
+                        <th scope="row">{{$sale->id}}</th>
+                        <td>{{$sale->due_date}}</td>
+                        <td>{{$sale->type}}</td>
+                        <td>{{$sale->total}}</td>
+                        <td>{{$sale->status}}</td>
                         <td class="action-col">
-                            <a href="/sizecharts/{{$sizechart->id}}/edit" class="btn btn-info">
+                            <a href="/sales/{{$sale->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <a href="/sizecharts/{{$sizechart->id}}/delete" class="btn btn-danger">
+                            <a href="/sales/{{$sale->id}}/delete" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                             <!-- Modal -->
@@ -51,7 +53,7 @@
                                         <!-- footer modal -->
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-                                            <a href="/sizecharts/{{$sizechart->id}}/delete" class="btn btn-danger" data-dismiss="modal">Ya</a>
+                                            <a href="/sales/{{$sale->id}}/delete" class="btn btn-danger" data-dismiss="modal">Ya</a>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +63,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{$sizecharts->links()}}
+            {{$sales->links()}}
         </div>
     </div>
 </div>
