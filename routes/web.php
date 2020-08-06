@@ -40,6 +40,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/customers/{id}/delete', 'CustomerController@destroy');
     Route::get('/products/{id}/delete', 'ProductController@destroy');
     Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
+
+    Route::get('/sales/{id}/print', 'SaleController@print');
 });
 
 Auth::routes();

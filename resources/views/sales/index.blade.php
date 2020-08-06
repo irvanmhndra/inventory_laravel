@@ -36,6 +36,9 @@
                             <a href="/sales/{{$sale->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>
                             </a>
+                            <a href="/sales/{{$sale->id}}/print" class="btn btn-primary">
+                                <i class="fas fa-print"></i>
+                            </a>
                             <a href="/sales/{{$sale->id}}/delete" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
                             </a>

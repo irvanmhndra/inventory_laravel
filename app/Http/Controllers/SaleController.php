@@ -39,7 +39,7 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'customer_id' => 'required',
             'total' => 'required',
             'packaging' => 'required',
@@ -99,5 +99,11 @@ class SaleController extends Controller
         $sale = Sale::find($id);
         $sale->delete();
         return \redirect('sales');
+    }
+
+    public function print($id)
+    {
+        $sale = Sale::find($id);
+        return \view('sales.draft', ['sale' => $sale]);
     }
 }
