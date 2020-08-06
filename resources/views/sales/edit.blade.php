@@ -6,7 +6,7 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Penjualan</h1>
+            <h1 class="text-center" style="font-size: 20px">Edit Penjualan</h1>
             <hr>
             <form action="/purchases" method="post">
                 @csrf
@@ -23,11 +23,11 @@
                         </div>
                         <div class="form-group">
                             <label for="total">Total</label>
-                            <input class="form-control" type="text" name="total" id="total" value="" placeholder="Masukkan Total Pembayaran" required>
+                            <input class="form-control" type="text" name="total" id="total" value="" placeholder="Contoh: 500000" required>
                         </div>
                         <div class="form-group">
                             <label for="packaging">Packaging</label>
-                            <input class="form-control" type="text" name="packaging" id="packaging" value="" placeholder="Masukkan Biaya Packaging" required>
+                            <input class="form-control" type="text" name="packaging" id="packaging" value="" placeholder="Contoh: 25000" required>
                         </div>
                     </div>
                     <div class="col-lg-6">

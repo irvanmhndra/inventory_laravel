@@ -16,13 +16,13 @@
                         <div class="form-group">
                             <label for="name">Ukuran</label>
                             <input class="form-control" type="text" name="size" id="size" value=""
-                                placeholder="Masukkan Ukuran Produk" required>
+                                placeholder="Contoh: 10R" required>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                    <label for="name">Deskripsi</label>
+                    <label for="name">Deskripsi (cm)</label>
                             <input class="form-control" type="text" name="desc" id="desc" value=""
-                                placeholder="Contoh: 13 x 20" required>
+                                placeholder="Contoh: 25 x 30" required>
                     </div>
                     <div class="col-lg-3">
                         <div class="form-group text-right mt-4">

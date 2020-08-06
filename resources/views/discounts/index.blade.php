@@ -6,7 +6,7 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Diskon Produk</h1>
+            <h1 class="text-center" style="font-size: 20px">Daftar Diskon Produk</h1>
             <hr>
             <a href="{{ url('discounts/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>

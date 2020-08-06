@@ -39,7 +39,7 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'customer_id' => 'required',
             'total' => 'required',
             'packaging' => 'required',

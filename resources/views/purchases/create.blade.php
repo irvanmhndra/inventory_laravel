@@ -25,13 +25,13 @@
                         </div>
                         <div class="form-group">
                             <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="" placeholder="Masukkan Harga Produk" required>
+                            <input class="form-control" type="text" name="price" id="price" value="" placeholder="Contoh: 12500" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="quantity">Jumlah</label>
-                            <input class="form-control" type="text" name="quantity" id="quantity" value="" placeholder="Masukkan Jumlah Produk" required>
+                            <input class="form-control" type="text" name="quantity" id="quantity" value="" placeholder="Contoh: 50" required>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/products" class="btn btn-warning text-white">

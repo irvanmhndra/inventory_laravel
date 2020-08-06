@@ -6,9 +6,7 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">
-                Ukuran <small style="font-size: 18px">Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Daftar Ukuran Produk</h1>
             <hr>
             <a href="{{ url('sizecharts/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>

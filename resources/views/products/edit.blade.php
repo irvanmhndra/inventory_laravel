@@ -31,25 +31,25 @@
                         </div>
                         <div class="form-group">
                             <label for="stock">Jumlah Ketersediaan</label>
-                            <input class="form-control" type="text" name="stock" id="stock" value="{{$product->stock}}" placeholder="Masukkan Jumlah Ketersediaan" required>
+                            <input class="form-control" type="text" name="stock" id="stock" value="{{$product->stock}}" placeholder="Contoh: 50" required>
                         </div>
                         <div class="form-group">
                             <label for="color">Warna</label>
-                            <input class="form-control" type="text" name="color" id="color" value="{{$product->color}}" placeholder="Masukkan Warna Produk" required>
+                            <input class="form-control" type="text" name="color" id="color" value="{{$product->color}}" placeholder="Contoh: Putih" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="{{$product->price}}" placeholder="Masukkan Harga Produk" required>
+                            <input class="form-control" type="text" name="price" id="price" value="{{$product->price}}" placeholder="Contoh: 12500" required>
                         </div>
                         <div class="form-group">
-                            <label for="depth">Kedalaman</label>
-                            <input class="form-control" type="text" name="depth" id="depth" value="{{$product->depth}}" placeholder="Masukkan Kedalaman Produk" required>
+                            <label for="depth">Kedalaman (cm)</label>
+                            <input class="form-control" type="text" name="depth" id="depth" value="{{$product->depth}}" placeholder="Contoh: 2" required>
                         </div>
                         <div class="form-group">
-                            <label for="lin">Lin</label>
-                            <input class="form-control" type="text" name="lin" id="lin" value="{{$product->lin}}" placeholder="Masukkan Lin Produk" required>
+                            <label for="lin">Lin (cm)</label>
+                            <input class="form-control" type="text" name="lin" id="lin" value="{{$product->lin}}" placeholder="Contoh: 3" required>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/products" class="btn btn-warning text-white">

@@ -6,7 +6,7 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Produk</h1>
+            <h1 class="text-center" style="font-size: 20px">Daftar Produk</h1>
             <hr>
             <a href="{{ url('products/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
@@ -28,7 +28,7 @@
                     <tr>
                         <th scope="row">{{$product->id}}</th>
                         <td>{{$product->category->name}}</td>
-                        <td>{{$product->size->size}}</td>
+                        <td>{{$product->size->size}} cm</td>
                         <td>{{$product->stock}}</td>
                         <td>{{$product->price}}</td>
                         <td>

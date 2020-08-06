@@ -16,19 +16,19 @@
                         <div class="form-group">
                             <label for="name">Nama</label>
                             <input class="form-control" type="text" name="name" id="name" value="{{$customer->name}}"
-                                placeholder="Masukkan Nama Customer" required>
+                                placeholder="Contoh: irvan Mahendra" required>
                         </div>
                         <div class="form-group">
                             <label for="phoneNumber">Nomor Telepon</label>
                             <input class="form-control" type="text" name="phoneNumber" id="phoneNumber" value="{{$customer->phoneNumber}}"
-                                placeholder="Masukkan Nomor Telepon" required>
+                                placeholder="Contoh: 0858XXXXXXXX" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="address">Alamat</label>
                             <input class="form-control" type="text" name="address" id="address" value="{{$customer->address}}"
-                                placeholder="Masukkan Alamat" required>
+                                placeholder="Contoh: Jalan Anggrek No. 7" required>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/customers" class="btn btn-warning text-white">

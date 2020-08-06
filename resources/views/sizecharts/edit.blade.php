@@ -16,12 +16,12 @@
                         <div class="form-group">
                             <label for="name">Ukuran</label>
                             <input class="form-control" type="text" name="size" id="size" value="{{$sizechart->size}}"
-                                placeholder="Masukkan Ukuran Produk" required>
+                                placeholder="Contoh: 10R" required>
                         </div>
                         <div class="form-group">
-                            <label for="name">Deskripsi</label>
+                            <label for="name">Deskripsi (cm)</label>
                             <input class="form-control" type="text" name="desc" id="size" value="{{$sizechart->desc}}"
-                                placeholder="Contoh: 13 x 20" required>
+                                placeholder="Contoh: 25 x 30" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
