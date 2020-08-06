@@ -16,14 +16,14 @@
                         <div class="form-group">
                             <label for="name">Nama Diskon</label>
                             <input class="form-control" type="text" name="name" id="name" value=""
-                                placeholder="Masukkan Jenis/Tipe Discount" required>
+                                placeholder="Contoh: 3 Lusin" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="amount">Besaran Diskon</label>
+                            <label for="amount">Besaran Diskon (%)</label>
                             <input class="form-control" type="text" name="amount" id="amount" value=""
-                                placeholder="Masukkan Besaran Diskon (dalam %)" required>
+                                placeholder="Contoh: 30" required>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/discounts" class="btn btn-warning text-white">

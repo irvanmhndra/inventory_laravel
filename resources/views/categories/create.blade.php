@@ -16,7 +16,7 @@
                         <div class="form-group">
                             <label for="name">Nama Kategori</label>
                             <input class="form-control" type="text" name="name" id="name" value=""
-                                placeholder="Masukkan Jenis/Tipe Produk" required>
+                                placeholder="Contoh: Fiber" required>
                         </div>
                     </div>
                     <div class="col-lg-6">

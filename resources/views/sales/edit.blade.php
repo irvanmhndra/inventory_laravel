@@ -1,37 +1,53 @@
 @extends('layout.master')
 
-@section('title', 'Pembelian')
+@section('title', 'Penjualan')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
+            <h1 class="text-center" style="font-size: 20px">Penjualan</h1>
             <hr>
             <form action="/purchases" method="post">
                 @csrf
                 @method('post')
                 <div class="form-body">
                     <div class="col-lg-6">
-                        <div class="form-group">
-                            <label for="product_id">Produk</label>
-                            <select class="form-control" type="" name="product_id" id="product_id" value="{{$purchase->product_id}}" placeholder="Pilih Produk yang akan dibeli" required>
-                                @foreach ($products as $product)
-                                <option value="{{$product->id}}">
-                                <b>{{$product->category->name}} {{$product->size->size}}</b>
-                                (Warna: {{$product->color}}, Kedalaman: {{$product->depth}}, Lin: {{$product->lin}})</option>
+                    <div class="form-group">
+                            <label for="customer_id">Pelanggan</label>
+                            <select class="form-control" type="" name="customer_id" id="customer_id" value="" placeholder="Pilih Pelanggan" required>
+                                @foreach ($customers as $customer)
+                                <option value="{{$customer->id}}">{{$customer->name}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="{{$purchase->price}}" placeholder="Masukkan Harga Produk" required>
+                            <label for="total">Total</label>
+                            <input class="form-control" type="text" name="total" id="total" value="" placeholder="Masukkan Total Pembayaran" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="packaging">Packaging</label>
+                            <input class="form-control" type="text" name="packaging" id="packaging" value="" placeholder="Masukkan Biaya Packaging" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="quantity">Jumlah</label>
-                            <input class="form-control" type="text" name="quantity" id="quantity" value="{{$purchase->quantity}}" placeholder="Masukkan Jumlah Produk" required>
+                            <label for="due_date">Tanggal Jatuh Tempo</label>
+                            <input class="form-control" type="date" name="due_date" id="due_date" value="" placeholder="Masukkan Tanggal Jatuh Tempo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Jenis Pembayaran</label>
+                            <select class="form-control" type="" name="type" id="type" value="" placeholder="Pilih Jenis Pembayaran" required>
+                                <option value="Cash">Cash</option>
+                                <option value="Kredit">Kredit</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status Pembayaran</label>
+                            <select class="form-control" type="" name="status" id="status" value="" placeholder="Pilih Status Pembayaran" required>
+                                <option value="Lunas">Lunas</option>
+                                <option value="Belum Lunas">Belum Lunas</option>
+                            </select>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/products" class="btn btn-warning text-white">

@@ -18,10 +18,8 @@
                         <th scope="col">Kategori</th>
                         <th scope="col">Ukuran</th>
                         <th scope="col">Stok</th>
-                        <th scope="col">Warna</th>
                         <th scope="col">Harga</th>
-                        <th scope="col">Kedalaman</th>
-                        <th scope="col">Lin</th>
+                        <th scope="col">Detail</th>
                         <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
@@ -32,10 +30,14 @@
                         <td>{{$product->category->name}}</td>
                         <td>{{$product->size->size}}</td>
                         <td>{{$product->stock}}</td>
-                        <td>{{$product->color}}</td>
                         <td>{{$product->price}}</td>
-                        <td>{{$product->depth}}</td>
-                        <td>{{$product->lin}}</td>
+                        <td>
+                            <ul>
+                            <li>Warna: {{$product->color}}</li>
+                            <li>Kedalaman: {{$product->depth}} cm</li>
+                            <li>Lin: {{$product->lin}} cm</li>
+                            </ul>
+                        </td>
                         <td class="action-col">
                             <a href="/products/{{$product->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>

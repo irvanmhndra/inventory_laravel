@@ -1,13 +1,13 @@
 @extends('layout.master')
 
-@section('title', 'Customer')
+@section('title', 'Pelanggan')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
             <h1 class="text-center" style="font-size: 20px">FORM
-            <small style="font-size: 18px">Tambah Customer</small>
+            <small style="font-size: 18px">Tambah Pelanggan</small>
             </h1>
             <hr>
             <form action="/customers" method="post">

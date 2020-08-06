@@ -1,14 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Customer')
+@section('title', 'Pelanggan')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">
-                Customer <small style="font-size: 18px">Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Pelanggan</h1>
             <hr>
             <a href="{{ url('customers/create') }}" class="btn btn-info">
                 <i class="fas fa-plus"></i>
@@ -17,9 +15,9 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone Number</th>
-                        <th scope="col">Address</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Nomor Telepon</th>
+                        <th scope="col">Alamat</th>
                         <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>

@@ -1,14 +1,12 @@
 @extends('layout.master')
 
-@section('title', 'Customer')
+@section('title', 'Pelanggan')
 
 @section('container')
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">FORM <small style="font-size: 18px">Edit Customer
-                    Produk</small>
-            </h1>
+            <h1 class="text-center" style="font-size: 20px">Edit Pelanggan</h1>
             <hr>
             <form action="/customers/{{$customer->id}}" method="post">
                 @csrf
@@ -16,7 +14,7 @@
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="name">Nama Customer</label>
+                            <label for="name">Nama</label>
                             <input class="form-control" type="text" name="name" id="name" value="{{$customer->name}}"
                                 placeholder="Masukkan Nama Customer" required>
                         </div>

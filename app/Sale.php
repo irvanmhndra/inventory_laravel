@@ -9,9 +9,16 @@ class Sale extends Model
     protected $table = "sales";
 
     protected $fillable = [
+            'customer_id',
+            'total',
+            'packaging',
             'due_date',
             'type',
-            'total',
             'status'
     ];
+
+    public function customer()
+    {
+        return $this->belongsTo('App\Customer');
+    }
 }

@@ -14,4 +14,9 @@ class Customer extends Model
         'phoneNumber',
         'address'
     ];
+
+    public function sales()
+    {
+        return $this->hasMany('App\Sale');
+    }
 }

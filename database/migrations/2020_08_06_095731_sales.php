@@ -15,7 +15,7 @@ class Sales extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->integer('cutomer_id');
+            $table->integer('customer_id');
             $table->date('due_date');
             $table->string('type');
             $table->double('total');

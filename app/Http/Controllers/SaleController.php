@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Sale;
+use App\Customer;
 use Illuminate\Http\Request;
 
 class SaleController extends Controller
@@ -26,7 +27,8 @@ class SaleController extends Controller
      */
     public function create()
     {
-        return \view('sales.create');
+        $customers = Customer::all();
+        return \view('sales.create', ['customers' => $customers]);
     }
 
     /**
@@ -37,10 +39,12 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($request, [
+        $this->validate($request, [
+            'customer_id' => 'required',
+            'total' => 'required',
+            'packaging' => 'required',
             'due_date' => 'required',
             'type' => 'required',
-            'total' => 'required',
             'status' => 'required'
         ]);
 
@@ -67,7 +71,8 @@ class SaleController extends Controller
      */
     public function edit(Sale  $sale)
     {
-        return \view('sales.edit', ['sale' => $sale]);
+        $customers = Customer::all();
+        return \view('sales.edit', ['customers' => $customers, 'sale' => $sale]);
     }
 
     /**

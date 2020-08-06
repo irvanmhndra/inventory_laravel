@@ -15,20 +15,22 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Batas Waktu Pembayaran</th>
-                        <th scope="col">Jenis Pembayaran</th>
-                        <th scope="col">Total Pembayaran</th>
-                        <th scope="col">Status Pembayaran</th>
-                        <th scope="col" class="action-col"></th>
+                        <th scope="col">Pelanggan</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Tanggal Jatuh Tempo</th>
+                        <th scope="col">Jenis</th>
+                        <th scope="col">Status</th>
+                        <th scope="col" class="action-col"> </th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($sales as $sale)
                     <tr>
                         <th scope="row">{{$sale->id}}</th>
+                        <td>{{$sale->customer->name}}</td>
+                        <td>{{$sale->total}}</td>
                         <td>{{$sale->due_date}}</td>
                         <td>{{$sale->type}}</td>
-                        <td>{{$sale->total}}</td>
                         <td>{{$sale->status}}</td>
                         <td class="action-col">
                             <a href="/sales/{{$sale->id}}/edit" class="btn btn-info">

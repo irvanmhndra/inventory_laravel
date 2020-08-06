@@ -14,7 +14,7 @@
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="category">Kategori</label>
+                            <label for="category_id">Kategori</label>
                             <select class="form-control" type="" name="category_id" id="category_id" value="" placeholder="Pilih Kategori Produk" required>
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -31,17 +31,17 @@
                         </div>
                         <div class="form-group">
                             <label for="stock">Jumlah Ketersediaan</label>
-                            <input class="form-control" type="text" name="stock" id="stock" value="" placeholder="Masukkan Jumlah Ketersediaan" required>
+                            <input class="form-control" type="text" name="stock" id="stock" value="" placeholder="Contoh: 50" required>
                         </div>
                         <div class="form-group">
                             <label for="color">Warna</label>
-                            <input class="form-control" type="text" name="color" id="color" value="" placeholder="Masukkan Warna Produk" required>
+                            <input class="form-control" type="text" name="color" id="color" value="" placeholder="Contoh: Putih" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="" placeholder="Masukkan Harga Produk" required>
+                            <input class="form-control" type="text" name="price" id="price" value="" placeholder="Contoh: 12500" required>
                         </div>
                         <div class="form-group">
                             <label for="depth">Kedalaman</label>

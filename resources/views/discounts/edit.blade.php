@@ -16,14 +16,14 @@
                         <div class="form-group">
                             <label for="name">Nama Diskon</label>
                             <input class="form-control" type="text" name="name" id="name" value="{{$discount->name}}"
-                                placeholder="Masukkan Nama/Pengenal Diskon" required>
+                                placeholder="Contoh: 3 Lusin" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-group">
-                            <label for="name">Jumlah Diskon (%)</label>
+                            <label for="amount">Besaran Diskon (%)</label>
                             <input class="form-control" type="text" name="amount" id="amount" value="{{$discount->amount}}"
-                                placeholder="Masukkan Jumlah Diskon dalam Presentase" required>
+                                placeholder="Contoh: 30" required>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/discounts" class="btn btn-warning text-white">
