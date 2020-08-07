@@ -8,9 +8,9 @@
         <div class="card-body">
             <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
             <hr>
-            <form action="/purchases" method="post">
+            <form action="/purchases/{{$purchase->id}}" method="post">
                 @csrf
-                @method('post')
+                @method('put')
                 <div class="form-body">
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -24,7 +24,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="price">Harga</label>
+                            <label for="price">Harga Satuan</label>
                             <input class="form-control" type="text" name="price" id="price" value="{{$purchase->price}}" placeholder="Contoh: 12500" required>
                         </div>
                     </div>

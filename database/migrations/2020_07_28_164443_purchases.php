@@ -18,6 +18,7 @@ class Purchases extends Migration
             $table->string('product_id');
             $table->double('price');
             $table->integer('quantity');
+            $table->timestamps();
         });
     }
 

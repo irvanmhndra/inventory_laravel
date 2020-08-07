@@ -16,8 +16,11 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nama Produk</th>
-                        <th scope="col">Harga</th>
+                        <th scope="col">Harga Satuan</th>
                         <th scope="col">Jumlah</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Tanggal Dibuat</th>
+                        <th scope="col">Tanggal Diedit</th>
                         <th scope="col" class="action-col"></th>
                     </tr>
                 </thead>
@@ -28,6 +31,9 @@
                         <td>{{$purchase->product->category->name}}</td>
                         <td>{{$purchase->price}}</td>
                         <td>{{$purchase->quantity}}</td>
+                        <td>{{$purchase->price * $purchase->quantity}}</td>
+                        <td>{{$purchase->created_at}}</td>
+                        <td>{{$purchase->updated_at}}</td>
                         <td class="action-col">
                             <a href="/purchases/{{$purchase->id}}/edit" class="btn btn-info">
                                 <i class="fas fa-edit"></i>

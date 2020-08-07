@@ -71,7 +71,7 @@ class PurchaseController extends Controller
     public function edit(Purchase  $purchase)
     {
         $products = Product::all();
-        return \view('purchases.edit', ['purchase' => $purchase, 'products' => $products ]);
+        return \view('purchases.edit', ['purchase' => $purchase, 'products' => $products]);
     }
 
     /**

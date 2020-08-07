@@ -20,9 +20,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                    <label for="name">Deskripsi (cm)</label>
-                            <input class="form-control" type="text" name="desc" id="desc" value=""
-                                placeholder="Contoh: 25 x 30" required>
+                        <label for="name">Deskripsi</label>
+                        <input class="form-control" type="text" name="desc" id="desc" value=""
+                            placeholder="Contoh: 25 cm x 30 cm" required>
                     </div>
                     <div class="col-lg-3">
                         <div class="form-group text-right mt-4">

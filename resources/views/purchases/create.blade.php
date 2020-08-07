@@ -24,7 +24,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="price">Harga</label>
+                            <label for="price">Harga Satuan</label>
                             <input class="form-control" type="text" name="price" id="price" value="" placeholder="Contoh: 12500" required>
                         </div>
                     </div>

@@ -15,7 +15,8 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="category_id">Kategori</label>
-                            <select class="form-control" type="" name="category_id" id="category_id" value="" placeholder="Pilih Kategori Produk" required>
+                            <select class="form-control" type="" name="category_id" id="category_id" value=""
+                                placeholder="Pilih Kategori Produk" required>
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
@@ -23,33 +24,37 @@
                         </div>
                         <div class="form-group">
                             <label for="size">Ukuran</label>
-                            <select class="form-control" type="" name="size_id" id="size_id" value="" placeholder="Pilih Ukuran Produk" required>
+                            <select class="form-control" type="" name="size_id" id="size_id" value=""
+                                placeholder="Pilih Ukuran Produk" required>
                                 @foreach ($sizes as $size)
                                 <option value="{{$size->id}}">{{$size->size}} ({{$size->desc}})</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="stock">Jumlah Ketersediaan</label>
-                            <input class="form-control" type="text" name="stock" id="stock" value="" placeholder="Contoh: 50" required>
+                            <input class="form-control" type="hidden" name="stock" id="stock" value="0" required>
                         </div>
                         <div class="form-group">
                             <label for="color">Warna</label>
-                            <input class="form-control" type="text" name="color" id="color" value="" placeholder="Contoh: Putih" required>
+                            <input class="form-control" type="text" name="color" id="color" value=""
+                                placeholder="Contoh: Putih" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="" placeholder="Contoh: 12500" required>
+                            <input class="form-control" type="text" name="price" id="price" value=""
+                                placeholder="Contoh: 12500" required>
                         </div>
                         <div class="form-group">
-                            <label for="depth">Kedalaman (cm)</label>
-                            <input class="form-control" type="text" name="depth" id="depth" value="" placeholder="Contoh: 2" required>
+                            <label for="depth">Kedalaman</label>
+                            <input class="form-control" type="text" name="depth" id="depth" value=""
+                                placeholder="Contoh: 2 cm" required>
                         </div>
                         <div class="form-group">
-                            <label for="lin">Lin (cm)</label>
-                            <input class="form-control" type="text" name="lin" id="lin" value="" placeholder="Contoh: 3" required>
+                            <label for="lin">Lin</label>
+                            <input class="form-control" type="text" name="lin" id="lin" value=""
+                                placeholder="Contoh: 3 cm" required>
                         </div>
                         <div class="form-group text-right mt-4">
                             <a href="/products" class="btn btn-warning text-white">

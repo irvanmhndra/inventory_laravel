@@ -28,14 +28,14 @@
                     <tr>
                         <th scope="row">{{$product->id}}</th>
                         <td>{{$product->category->name}}</td>
-                        <td>{{$product->size->size}} cm</td>
-                        <td>{{$product->stock}}</td>
+                        <td>{{$product->size->size}}</td>
+                        <td>{{$product->stock ? $product->stock : 0}}</td>
                         <td>{{$product->price}}</td>
                         <td>
                             <ul>
                             <li>Warna: {{$product->color}}</li>
-                            <li>Kedalaman: {{$product->depth}} cm</li>
-                            <li>Lin: {{$product->lin}} cm</li>
+                            <li>Kedalaman: {{$product->depth}}</li>
+                            <li>Lin: {{$product->lin}}</li>
                             </ul>
                         </td>
                         <td class="action-col">

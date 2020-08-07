@@ -19,9 +19,9 @@
                                 placeholder="Contoh: 10R" required>
                         </div>
                         <div class="form-group">
-                            <label for="name">Deskripsi (cm)</label>
+                            <label for="name">Deskripsi</label>
                             <input class="form-control" type="text" name="desc" id="size" value="{{$sizechart->desc}}"
-                                placeholder="Contoh: 25 x 30" required>
+                                placeholder="Contoh: 25 cm x 30 cm" required>
                         </div>
                     </div>
                     <div class="col-lg-6">

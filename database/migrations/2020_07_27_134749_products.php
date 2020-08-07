@@ -17,11 +17,11 @@ class Products extends Migration
             $table->id();
             $table->integer('category_id');
             $table->integer('size_id');
-            $table->integer('stock');
             $table->string('color');
             $table->double('price');
-            $table->double('depth');
-            $table->double('lin');
+            $table->string('depth');
+            $table->string('lin');
+            $table->timestamps();
         });
     }
 
