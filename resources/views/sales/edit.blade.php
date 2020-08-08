@@ -15,7 +15,7 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                             <label for="customer_id">Pelanggan</label>
-                            <select class="form-control" type="" name="customer_id" id="customer_id" value="" placeholder="Pilih Pelanggan" required>
+                            <select class="form-control" type="" name="customer_id" id="customer_id" value="{{$sale->customer_id}}" placeholder="Pilih Pelanggan" required>
                                 @foreach ($customers as $customer)
                                 <option value="{{$customer->id}}">{{$customer->name}}</option>
                                 @endforeach
@@ -23,28 +23,28 @@
                         </div>
                         <div class="form-group">
                             <label for="total">Total</label>
-                            <input class="form-control" type="text" name="total" id="total" value="" placeholder="Contoh: 500000" required>
+                            <input class="form-control" type="text" name="total" id="total" value="{{$sale->total}}" placeholder="Contoh: 500000" required>
                         </div>
                         <div class="form-group">
                             <label for="packaging">Packaging</label>
-                            <input class="form-control" type="text" name="packaging" id="packaging" value="" placeholder="Contoh: 25000" required>
+                            <input class="form-control" type="text" name="packaging" id="packaging" value="{{$sale->packaging}}" placeholder="Contoh: 25000" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="due_date">Tanggal Jatuh Tempo</label>
-                            <input class="form-control" type="date" name="due_date" id="due_date" value="" placeholder="Masukkan Tanggal Jatuh Tempo" required>
+                            <input class="form-control" type="date" name="due_date" id="due_date" value="{{$sale->due_date}}" placeholder="Masukkan Tanggal Jatuh Tempo" required>
                         </div>
                         <div class="form-group">
                             <label for="type">Jenis Pembayaran</label>
-                            <select class="form-control" type="" name="type" id="type" value="" placeholder="Pilih Jenis Pembayaran" required>
+                            <select class="form-control" type="" name="type" id="type" value="{{$sale->type}}" placeholder="Pilih Jenis Pembayaran" required>
                                 <option value="Cash">Cash</option>
                                 <option value="Kredit">Kredit</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="status">Status Pembayaran</label>
-                            <select class="form-control" type="" name="status" id="status" value="" placeholder="Pilih Status Pembayaran" required>
+                            <select class="form-control" type="" name="status" id="status" value="{{$sale->status}}" placeholder="Pilih Status Pembayaran" required>
                                 <option value="Lunas">Lunas</option>
                                 <option value="Belum Lunas">Belum Lunas</option>
                             </select>

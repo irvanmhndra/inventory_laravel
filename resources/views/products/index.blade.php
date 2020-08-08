@@ -28,7 +28,7 @@
                     <tr>
                         <th scope="row">{{$product->id}}</th>
                         <td>{{$product->category->name}}</td>
-                        <td>{{$product->size->size}} cm</td>
+                        <td>{{$product->size->size}}</td>
                         <td>{{$product->stock}}</td>
                         <td>{{$product->price}}</td>
                         <td>

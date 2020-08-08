@@ -6,7 +6,7 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
+            <h1 class="text-center" style="font-size: 20px">Pembelian Produk</h1>
             <hr>
             <form action="/purchases" method="post">
                 @csrf
@@ -19,7 +19,7 @@
                                 @foreach ($products as $product)
                                 <option value="{{$product->id}}">
                                 <b>{{$product->category->name}} {{$product->size->size}}</b>
-                                (Warna: {{$product->color}}, Kedalaman: {{$product->depth}}, Lin: {{$product->lin}})</option>
+                                (Warna: {{$product->color}}, Kedalaman: {{$product->depth}} cm, Lin: {{$product->lin}} cm)</option>
                                 @endforeach
                             </select>
                         </div>
