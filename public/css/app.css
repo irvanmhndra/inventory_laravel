@@ -11204,6 +11204,14 @@ th tr td {
   box-sizing: border-box;
 }
 
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control {
+  margin-bottom: 1em;
+}
+
 .main-head {
   height: 150px;
   background: #fff;
