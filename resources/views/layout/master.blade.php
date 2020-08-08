@@ -11,6 +11,7 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ asset('/assets/fontawesome/css/all.min.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
   <title>@yield('title')</title>
 </head>

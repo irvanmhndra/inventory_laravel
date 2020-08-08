@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    height: auto;
     overflow-x: hidden;
     box-sizing: content-box;
     display: block;
@@ -26,6 +26,10 @@ p {
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
+}
+
+b {
+    font-weight: bold;
 }
 
 i {
@@ -266,4 +270,12 @@ th tr td {
 .form-body {
     display: flex;
     box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-control {
+    margin-bottom: 1rem;
 }

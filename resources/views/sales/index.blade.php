@@ -38,7 +38,7 @@
                                     <a href="/sales/{{$sale->id}}/edit" class="btn btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="/sale s/{{$sale->id}}/delete" class="btn btn-danger">
+                                    <a href="/sales/{{$sale->id}}/delete" class="btn btn-danger">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                     <!-- Modal -->
