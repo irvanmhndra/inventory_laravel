@@ -11199,9 +11199,12 @@ th tr td {
   color: #17a2b8;
 }
 
-.form-body {
-  display: flex;
-  box-sizing: border-box;
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control {
+  margin-bottom: 1em;
 }
 
 .main-head {
