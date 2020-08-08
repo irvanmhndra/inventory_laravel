@@ -16,8 +16,7 @@
                         <div class="col-sm-6">
                             <label for="customer_id">Pelanggan</label>
                             <select class="form-control" type="" name="customer_id" id="customer_id" value=""
-                                placeholder="" required>
-                                <option value="">Pilih Pelanggan</option>
+                                placeholder="Pilih Pelanggan" required>
                                 @foreach ($customers as $customer)
                                 <option value="{{$customer->id}}">{{$customer->name}}</option>
                                 @endforeach
