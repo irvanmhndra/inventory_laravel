@@ -12,19 +12,23 @@
                 <form action="/categories" method="post">
                     @csrf
                     @method('post')
-                    <div class="form-group row">
-                        <div class="col-lg-6 col-12">
-                            <label for="name">Nama Kategori</label>
-                            <input class="form-control" type="text" name="name" id="name" value=""
-                                placeholder="Contoh: Fiber" required>
+                    <div class="form-body">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="name">Nama Kategori</label>
+                                <input class="form-control" type="text" name="name" id="name" value=""
+                                    placeholder="Contoh: Fiber" required>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-12 mt-5">
-                            <a href="/categories" class="btn btn-warning text-white">
-                                <i class="material-icons">Kembali</i>
-                            </a>
-                            <button class="btn btn-primary" type="submit" name="submit" id="btnSubmit">
-                                <i class="material-icons">Simpan</i>
-                            </button>
+                        <div class="col-lg-6">
+                            <div class="form-group text-right mt-4">
+                                <a href="/categories" class="btn btn-warning text-white">
+                                    <i class="material-icons">Kembali</i>
+                                </a>
+                                <button class="btn btn-primary" type="submit" name="submit" id="btnSubmit">
+                                    <i class="material-icons">Simpan</i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
