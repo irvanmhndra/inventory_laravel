@@ -59,6 +59,10 @@
           <i class="fas fa-percent"></i>
           Diskon
         </a>
+        <a href="/addons">
+          <i class="fas fa-percent"></i>
+          Addons
+        </a>
         <a href="/logout">
           <i class="fas fa-power-off"></i>
           Logout

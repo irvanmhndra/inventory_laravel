@@ -1,15 +1,15 @@
 @extends('layout.master')
 
-@section('title', 'Pembelian')
+@section('title', 'Addons')
 
 @section('container')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
+                <h1 class="text-center" style="font-size: 20px">Daftar Addons</h1>
                 <hr>
-                <a href="{{ url('purchases/create') }}" class="btn btn-info">
+                <a href="{{ url('addons/create') }}" class="btn btn-info">
                     <i class="fas fa-plus"></i>
                 </a>
                 <div class="table-responsive">
@@ -17,30 +17,22 @@
                         <thead>
                             <tr>
                                 <th scope="col">Id</th>
-                                <th scope="col">Nama Produk</th>
-                                <th scope="col">Harga Dasar</th>
-                                <th scope="col">Jumlah</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Tanggal Dibuat</th>
-                                <th scope="col">Tanggal Diedit</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Besaran</th>
                                 <th scope="col" class="action-col"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($purchases as $purchase)
+                            @foreach ($addons as $addon)
                             <tr>
-                                <th scope="row">{{$purchase->id}}</th>
-                                <td>{{$purchase->product->category->name}}</td>
-                                <td>{{$purchase->price}}</td>
-                                <td>{{$purchase->quantity}}</td>
-                                <td>{{$purchase->price * $purchase->quantity}}</td>
-                                <td>{{$purchase->created_at}}</td>
-                                <td>{{$purchase->updated_at}}</td>
+                                <th scope="row">{{$addon->id}}</th>
+                                <td>{{$addon->name}}</td>
+                                <td>{{$addon->amount}} %</td>
                                 <td class="action-col">
-                                    <a href="/purchases/{{$purchase->id}}/edit" class="btn btn-info">
+                                    <a href="/addons/{{$addon->id}}/edit" class="btn btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="/purchases/{{$purchase->id}}/delete" class="btn btn-danger">
+                                    <a href="/addons/{{$addon->id}}/delete" class="btn btn-danger">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                     <!-- Modal -->
@@ -60,7 +52,7 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default"
                                                         data-dismiss="modal">Tidak</button>
-                                                    <a href="/purchases/{{$purchase->id}}/delete" class="btn btn-danger"
+                                                    <a href="/addons/{{$addon->id}}/delete" class="btn btn-danger"
                                                         data-dismiss="modal">Ya</a>
                                                 </div>
                                             </div>
@@ -71,7 +63,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{$purchases->links()}}
+                    {{$addons->links()}}
                 </div>
             </div>
         </div>

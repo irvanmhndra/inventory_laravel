@@ -26,7 +26,7 @@
                             </select>
                         </div>
                         <div class="col-lg-6 col-12">
-                            <label for="price">Harga Satuan</label>
+                            <label for="price">Harga Dasar</label>
                             <input class="form-control" type="text" name="price" id="price" value=""
                                 placeholder="Contoh: 12500" required>
                         </div>
