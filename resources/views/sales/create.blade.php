@@ -61,7 +61,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-2 col-6">
-                                    <input type="number" placeholder="Jumlah" id="totals" name="totals[]" value=""
+                                    <input type="number" placeholder="Jumlah" id="amounts" name="amounts[]" value=""
                                         class="form-control" required>
                                 </div>
                                 <div class="col-lg-2 col-6">
@@ -137,7 +137,7 @@
                         </select>
                     </div>
                     <div class="col-lg-2 col-6">
-                        <input type="number" placeholder="Jumlah" name="total[]" value="" class="form-control" required>
+                        <input type="number" placeholder="Jumlah" name="amounts[]" value="" class="form-control" required>
                     </div>
                     <div class="col-lg-2 col-6">
                         <input type="button" value="+" class="b1 btn btn-primary" onclick="addRow()">

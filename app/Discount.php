@@ -13,6 +13,6 @@ class Discount extends Model
 
     public function sales()
     {
-        return $this->belongsToMany('App\Sale');
+        return $this->belongsToMany('App\Sale', 'sale_discount');
     }
 }

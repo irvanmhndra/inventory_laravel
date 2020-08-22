@@ -24,7 +24,7 @@ class Sale extends Model
 
     public function discounts()
     {
-        return $this->belongsToMany('App\Discount');
+        return $this->belongsToMany('App\Discount', 'sale_discount');
     }
 
     public function detail()
