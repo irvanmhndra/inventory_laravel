@@ -18,9 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::select('products.*', DB::raw('SUM(purchases.quantity) as stock'))
-            ->leftJoin('purchases', 'purchases.product_id', '=', 'products.id')
-            ->paginate(10);
+        $products = Product::paginate(10);
         return \view('products.index', ['products' => $products]);
     }
 

@@ -10,4 +10,9 @@ class Discount extends Model
     protected $table = "discounts";
 
     protected $fillable = ['name', 'amount'];
+
+    public function sales()
+    {
+        return $this->belongsToMany('App\Sale');
+    }
 }

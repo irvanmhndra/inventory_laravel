@@ -48,39 +48,21 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="packaging">Diskon</label>
-                            <select class="form-control" type="" name="diskon_ids[]" id="diskon" multiple value=""
-                                placeholder="" required>
-                                @foreach ($discounts as $discount)
-                                <option value="{{$discount->id}}">
-                                    {{$discount->name}}: -{{$discount->amount}}%
-                                </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="packaging">Packaging</label>
-                            <input class="form-control" type="text" name="packaging" id="packaging" value=""
-                                placeholder="Contoh: 25000" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <div class="col-sm-12">
                             <label for="total">Item</label>
                             <div class="row">
                                 <div class="col-lg-8 col-12">
-                                    <select class="form-control" type="" name="product_id" id="product" value=""
+                                    <select class="form-control" type="" name="product_ids[]" id="product" value=""
                                         placeholder="Pilih Jenis Pembayaran" required>
                                         @foreach ($products as $product)
-                                        <option value="{{$product->id}}">{{$product->category->name}} @
+                                        <option value="{{$product->id}}">{{$product->category->name}} {{$product->color}} Lin: {{$product->lin}} @
                                             {{$product->price}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-lg-2 col-6">
-                                    <input type="number" placeholder="Jumlah" id="total" name="total[]" value=""
-                                        class="form-control">
+                                    <input type="number" placeholder="Jumlah" id="totals" name="totals[]" value=""
+                                        class="form-control" required>
                                 </div>
                                 <div class="col-lg-2 col-6">
                                     <input type="button" value="+" class="b1 btn btn-primary" onclick="addRow()">
@@ -89,6 +71,30 @@
                         </div>
                     </div>
                     <div id="items"></div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="packaging">Diskon</label>
+                            <select class="form-control" type="" name="discount_ids[]" id="discounts" multiple value=""
+                                placeholder="" required>
+                                @foreach ($discounts as $discount)
+                                <option value="{{$discount->id}}">
+                                    {{$discount->name}}: -{{$discount->amount}}%
+                                </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="packaging">Packaging</label>
+                            <input class="form-control" type="text" name="packaging" id="packaging" value=""
+                                placeholder="Contoh: 25000" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="packaging">Jumlah yang dibayar</label>
+                            <input class="form-control" type="text" name="amount_due" id="amount_due" value=""
+                                placeholder="Contoh: 75000" required>
+                        </div>
+                    </div>
+
                     <div class="form-group text-right mt-4">
                         <a href="/sales" class="btn btn-warning text-white">
                             <i class="material-icons">Kembali</i>
@@ -108,7 +114,7 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#diskon').select2({
+        $('#discounts').select2({
             placeholder: "Pilih Diskon/Promo"
         });
     });
@@ -122,15 +128,16 @@
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-lg-8 col-12">
-                        <select class="form-control" type="" name="product_id" id="type" value=""
+                        <select class="form-control" type="" name="product_ids[]" id="type" value=""
                             placeholder="Pilih Jenis Pembayaran" required>
                             @foreach ($products as $product)
-                            <option value="{{$product->id}}">{{$product->category->name}} @ {{$product->price}}</option>
+                            <option value="{{$product->id}}">{{$product->category->name}} {{$product->color}} Lin: {{$product->lin}} @
+                                            {{$product->price}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="col-lg-2 col-6">
-                        <input type="number" placeholder="Jumlah" name="total[]" value="" class="form-control">
+                        <input type="number" placeholder="Jumlah" name="total[]" value="" class="form-control" required>
                     </div>
                     <div class="col-lg-2 col-6">
                         <input type="button" value="+" class="b1 btn btn-primary" onclick="addRow()">

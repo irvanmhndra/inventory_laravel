@@ -9,9 +9,9 @@
             <div class="card-body">
                 <h1 class="text-center" style="font-size: 20px">Edit Produk</h1>
                 <hr>
-                <form action="/products" method="post">
+                <form action="/products/{{$product->id}}" method="post">
                     @csrf
-                    @method('post')
+                    @method('put')
                     <div class="form-group row">
                         <div class="col-lg-6 col-12">
                             <label for="category">Kategori</label>

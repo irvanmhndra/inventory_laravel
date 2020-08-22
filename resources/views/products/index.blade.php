@@ -31,7 +31,7 @@
                                 <th scope="row">{{$product->id}}</th>
                                 <td>{{$product->category->name}}</td>
                                 <td>{{$product->size->size}}</td>
-                                <td>{{$product->stock ? $product->stock : 0}}</td>
+                                <td>{{$product->stock}}</td>
                                 <td>{{$product->price}}</td>
                                 <td>
                                     <ul>

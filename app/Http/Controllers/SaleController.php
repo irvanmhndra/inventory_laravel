@@ -6,6 +6,8 @@ use App\Sale;
 use App\Customer;
 use App\Discount;
 use App\Product;
+use App\SaleHistory;
+use App\SaleProduct;
 use Illuminate\Http\Request;
 
 class SaleController extends Controller
@@ -46,14 +48,17 @@ class SaleController extends Controller
         \dd($request->all());
         $request->validate([
             'customer_id' => 'required',
-            'total' => 'required',
+            'totals' => 'required',
             'packaging' => 'required',
             'due_date' => 'required',
             'type' => 'required',
             'status' => 'required'
         ]);
 
-        Sale::create($request->all());
+        $sale = Sale::create($request->all());
+        // save detail
+        // save discount
+        // save payment record
         return \redirect('/sales');
     }
 

@@ -20,6 +20,11 @@ class Product extends Model
         return $this->belongsTo('App\Sizechart');
     }
 
+    public function sales()
+    {
+        return $this->hasMany('App\SaleDetail');
+    }
+
     public function purchases()
     {
         return $this->hasMany('App\Purchase');

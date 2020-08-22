@@ -34,8 +34,8 @@
                                 <td>{{$purchase->price}}</td>
                                 <td>{{$purchase->quantity}}</td>
                                 <td>{{$purchase->price * $purchase->quantity}}</td>
-                                <td>{{$purchase->created_at}}</td>
-                                <td>{{$purchase->updated_at}}</td>
+                                <td>{{$purchase->created_at->format('d M Y')}}</td>
+                                <td>{{$purchase->updated_at->format('d M Y')}}</td>
                                 <td class="action-col">
                                     <a href="/purchases/{{$purchase->id}}/edit" class="btn btn-info">
                                         <i class="fas fa-edit"></i>
