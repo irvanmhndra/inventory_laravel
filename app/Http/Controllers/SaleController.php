@@ -67,6 +67,8 @@ class SaleController extends Controller
         // save detail
         foreach ($request->product_ids as $key => $product_id) {
             $product = Product::find($product_id);
+            $product->stock -= $request->amounts[$key];
+            $product->save();
             $sub_total = $request->amounts[$key] * $product->price;
             $temp_total += $sub_total;
             SaleDetail::create([
