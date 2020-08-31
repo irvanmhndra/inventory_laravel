@@ -27,7 +27,7 @@
                             <tr>
                                 <th scope="row">{{$addon->id}}</th>
                                 <td>{{$addon->name}}</td>
-                                <td>{{$addon->amount}} %</td>
+                                <td>{{$addon->amount}}</td>
                                 <td class="action-col">
                                     <a href="/addons/{{$addon->id}}/edit" class="btn btn-info">
                                         <i class="fas fa-edit"></i>

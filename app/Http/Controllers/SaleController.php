@@ -6,6 +6,7 @@ use App\Sale;
 use App\Customer;
 use App\Discount;
 use App\Product;
+use App\Addon;
 use Illuminate\Http\Request;
 
 class SaleController extends Controller
@@ -32,7 +33,8 @@ class SaleController extends Controller
         $customers = Customer::all();
         $products = Product::all();
         $discounts = Discount::all();
-        return \view('sales.create', ['customers' => $customers, 'products' => $products, 'discounts' => $discounts]);
+        $addons = Addon::all();
+        return \view('sales.create', ['customers' => $customers, 'products' => $products, 'discounts' => $discounts, 'addons' => $addons]);
     }
 
     /**
@@ -47,7 +49,6 @@ class SaleController extends Controller
         $request->validate([
             'customer_id' => 'required',
             'total' => 'required',
-            'packaging' => 'required',
             'due_date' => 'required',
             'type' => 'required',
             'status' => 'required'

@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <label for="packaging">Diskon</label>
+                            <label for="discount">Diskon</label>
                             <select class="form-control" type="" name="diskon_ids[]" id="diskon" multiple value=""
                                 placeholder="" required>
                                 @foreach ($discounts as $discount)
@@ -60,9 +60,15 @@
                             </select>
                         </div>
                         <div class="col-sm-6">
-                            <label for="packaging">Packaging</label>
-                            <input class="form-control" type="text" name="packaging" id="packaging" value=""
-                                placeholder="Contoh: 25000" required>
+                            <label for="addon">Addons</label>
+                            <select class="form-control" type="" name="addon_ids[]" id="addon" multiple value=""
+                                placeholder="" required>
+                                @foreach ($addons as $addon)
+                                <option value="{{$addon->id}}">
+                                    {{$addon->name}}: -{{$addon->amount}}
+                                </option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -110,6 +116,10 @@
     $(document).ready(function() {
         $('#diskon').select2({
             placeholder: "Pilih Diskon/Promo"
+        });
+
+        $('#addon').select2({
+            placeholder: "Pilih Addons"
         });
     });
 

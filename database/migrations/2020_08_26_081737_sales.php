@@ -19,7 +19,6 @@ class Sales extends Migration
             $table->date('due_date');
             $table->string('type');
             $table->double('total');
-            $table->double('packaging');
             $table->string('status');
             $table->timestamps();
         });

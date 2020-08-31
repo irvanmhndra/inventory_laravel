@@ -61,7 +61,7 @@
           Diskon
         </a>
         <a href="/addons">
-          <i class="fas fa-percent"></i>
+          <i class="fas fa-plus-circle"></i>
           Addons
         </a>
         <a href="/logout">
