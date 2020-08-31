@@ -17,11 +17,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">Id</th>
-                                <th scope="col">Pelanggan</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Tanggal Jatuh Tempo</th>
+                                <th scope="col">Tanggal Transaksi</th>
                                 <th scope="col">Jenis</th>
+                                <th scope="col">Tanggal Jatuh Tempo</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Tagihan</th>
                                 <th scope="col" class="action-col"> </th>
                             </tr>
                         </thead>
@@ -29,11 +30,12 @@
                             @foreach ($sales as $sale)
                             <tr>
                                 <th scope="row">{{$sale->id}}</th>
-                                <td>{{$sale->customer->name}}</td>
-                                <td>{{$sale->total}}</td>
-                                <td>{{$sale->due_date}}</td>
+                                <td>{{$sale->created_at}}</td>
                                 <td>{{$sale->type}}</td>
+                                <td>{{$sale->due_date}}</td>
                                 <td>{{$sale->status}}</td>
+                                <td>{{$sale->total}}</td>
+                                <td>{{$sale->total}}</td>
                                 <td class="action-col">
                                     <a href="/sales/{{$sale->id}}/edit" class="btn btn-info">
                                         <i class="fas fa-edit"></i>

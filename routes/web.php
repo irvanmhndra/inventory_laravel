@@ -32,7 +32,8 @@ Route::middleware('auth')->group(function () {
         'products' => 'ProductController',
         'purchases' => 'PurchaseController',
         'sales' => 'SaleController',
-        'addons' => 'AddonController'
+        'addons' => 'AddonController',
+        'invoices' => 'InvoiceController'
     ]);
     Route::get('/categories/{id}/delete', 'CategoryController@destroy');
     Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
@@ -42,6 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/products/{id}/delete', 'ProductController@destroy');
     Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
     Route::get('/addons/{id}/delete', 'AddonController@destroy');
+    Route::get('/invoice/{id}/delete', 'InvoiceController@destroy');
 });
 
 Auth::routes();

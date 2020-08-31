@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use App\Sale;
 use App\Customer;
 use App\Discount;
+use App\Payment;
 use App\Product;
 use App\Addon;
+use App\SaleDetail;
+use App\SaleHistory;
+use App\SaleProduct;
 use Illuminate\Http\Request;
 
 class SaleController extends Controller
@@ -45,16 +49,57 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
-        \dd($request->all());
+        // \dd($request->all());
+        $temp_total = 0;
+        $temp_discount = 0;
         $request->validate([
+            'product_ids' => 'required',
             'customer_id' => 'required',
             'total' => 'required',
+            'amounts' => 'required',
+            'packaging' => 'required',
             'due_date' => 'required',
             'type' => 'required',
-            'status' => 'required'
+            'status' => 'required',
+            'amount_due' => 'required',
+            'discount_ids' => 'required',
         ]);
 
-        Sale::create($request->all());
+        $sale = Sale::create($request->all());
+
+        // save detail
+        foreach ($request->product_ids as $key => $product_id) {
+            $product = Product::find($product_id);
+            $product->stock -= $request->amounts[$key];
+            $product->save();
+            $sub_total = $request->amounts[$key] * $product->price;
+            $temp_total += $sub_total;
+            SaleDetail::create([
+                'sale_id' => $sale->id,
+                'product_id' => $product_id,
+                'amount' => $request->amounts[$key],
+                'total' => $sub_total,
+            ]);
+        }
+
+        // save discount
+        $sale->discounts()->sync($request->discount_ids);
+
+        // save total transaction
+        foreach ($request->discount_ids as $discount_id) {
+            $discount = Discount::find($discount_id);
+            $temp_discount += $discount->amount;
+        }
+        $disc_price = $temp_total * $temp_discount/100;
+        $sale->total = $temp_total - $disc_price;
+        $sale->save();
+
+        // save payment record
+        Payment::create([
+            'sale_id' => $sale->id,
+            'amount' => $request->amount_due,
+        ]);
+
         return \redirect('/sales');
     }
 

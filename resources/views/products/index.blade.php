@@ -36,6 +36,7 @@
                                 <td>{{$product->color}}</td>
                                 <td>{{$product->depth}}</td>
                                 <td>{{$product->lin}}</td>
+                                <td>{{$product->stock}}</td>
                                 <td>{{$product->price}}</td>
                                 <td>{{$product->stock ? $product->stock : 0}}</td>
                                 <td class="action-col">
