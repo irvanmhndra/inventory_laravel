@@ -4,54 +4,60 @@
 
 @section('container')
 <div class="row">
-    <div class="card">
-        <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Edit Produk</h1>
-            <hr>
-            <form action="/products" method="post">
-                @csrf
-                @method('post')
-                <div class="form-body">
-                    <div class="col-lg-6">
-                        <div class="form-group">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center" style="font-size: 20px">Edit Produk</h1>
+                <hr>
+                <form action="/products/{{$product->id}}" method="post">
+                    @csrf
+                    @method('put')
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-12">
                             <label for="category">Kategori</label>
-                            <select class="form-control" type="" name="category_id" id="category_id" value="{{$product->category_id}}" placeholder="Pilih Kategori Produk" required>
+                            <select class="form-control" type="" name="category_id" id="category_id"
+                                value="{{$product->category_id}}" placeholder="Pilih Kategori Produk" required>
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="col-lg-6 col-12">
                             <label for="size">Ukuran</label>
-                            <select class="form-control" type="" name="size_id" id="size_id" value="{{$product->size_id}}" placeholder="Pilih Ukuran Produk" required>
+                            <select class="form-control" type="" name="size_id" id="size_id"
+                                value="{{$product->size_id}}" placeholder="Pilih Ukuran Produk" required>
                                 @foreach ($sizes as $size)
                                 <option value="{{$size->id}}">{{$size->size}} ({{$size->desc}})</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="stock">Jumlah Ketersediaan</label>
-                            <input class="form-control" type="text" name="stock" id="stock" value="{{$product->stock}}" placeholder="Masukkan Jumlah Ketersediaan" required>
-                        </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-12">
                             <label for="color">Warna</label>
-                            <input class="form-control" type="text" name="color" id="color" value="{{$product->color}}" placeholder="Masukkan Warna Produk" required>
+                            <input class="form-control" type="text" name="color" id="color"
+                                value="{{$product->color}}" placeholder="Contoh: Putih" required>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <label for="price">Harga</label>
+                            <input class="form-control" type="text" name="price" id="price"
+                                value="{{$product->price}}" placeholder="Contoh: 12500" required>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="{{$product->price}}" placeholder="Masukkan Harga Produk" required>
-                        </div>
-                        <div class="form-group">
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-12">
                             <label for="depth">Kedalaman</label>
-                            <input class="form-control" type="text" name="depth" id="depth" value="{{$product->depth}}" placeholder="Masukkan Kedalaman Produk" required>
+                            <input class="form-control" type="text" name="depth" id="depth"
+                                value="{{$product->depth}}" placeholder="Contoh: 2 cm" required>
                         </div>
-                        <div class="form-group">
+                        <div class="col-lg-6 col-12">
                             <label for="lin">Lin</label>
-                            <input class="form-control" type="text" name="lin" id="lin" value="{{$product->lin}}" placeholder="Masukkan Lin Produk" required>
+                            <input class="form-control" type="text" name="lin" id="lin" value="{{$product->lin}}"
+                                placeholder="Contoh: 3 cm" required>
                         </div>
-                        <div class="form-group text-right mt-4">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-12">
                             <a href="/products" class="btn btn-warning text-white">
                                 <i class="material-icons">Kembali</i>
                             </a>
@@ -60,9 +66,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+
 @endsection

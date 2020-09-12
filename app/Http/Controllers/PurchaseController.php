@@ -47,6 +47,9 @@ class PurchaseController extends Controller
         ]);
 
         Purchase::create($request->all());
+        $product = Product::find($request->product_id);
+        $product->stock += $request->quantity;
+        $product->save();
 
         return \redirect('/purchases');
     }
@@ -71,7 +74,7 @@ class PurchaseController extends Controller
     public function edit(Purchase  $purchase)
     {
         $products = Product::all();
-        return \view('purchases.edit', ['purchase' => $purchase, 'products' => $products ]);
+        return \view('purchases.edit', ['purchase' => $purchase, 'products' => $products]);
     }
 
     /**
@@ -83,7 +86,13 @@ class PurchaseController extends Controller
      */
     public function update(Request $request, Purchase $purchase)
     {
+        $request->validate([
+            'product_id' => 'required',
+            'price' => 'required',
+            'quantity' => 'required'
+        ]);
         $purchase->update($request->all());
+        syncStock($request->product_id);
         return \redirect('/purchases');
     }
 

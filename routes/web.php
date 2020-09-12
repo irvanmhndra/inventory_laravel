@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('home');
     });
 
     Route::get('/', function () {
-        return view('product');
+        return view('home');
     });
 
     Route::resources([
@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
         'products' => 'ProductController',
         'purchases' => 'PurchaseController',
         'sales' => 'SaleController',
+        'invoices' => 'InvoiceController',
     ]);
     Route::get('/categories/{id}/delete', 'CategoryController@destroy');
     Route::get('/discounts/{id}/delete', 'DiscountController@destroy');
@@ -40,6 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/customers/{id}/delete', 'CustomerController@destroy');
     Route::get('/products/{id}/delete', 'ProductController@destroy');
     Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
+    Route::get('/invoice/{id}/delete', 'InvoiceController@destroy');
 
     Route::get('/sales/{id}/print', 'SaleController@print');
 });

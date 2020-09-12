@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Purchases extends Migration
+class CreateSaleDiscountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class Purchases extends Migration
      */
     public function up()
     {
-        Schema::create('purchases', function (Blueprint $table) {
-            $table->id();
-            $table->string('product_id');
-            $table->double('price');
-            $table->integer('quantity');
-            $table->timestamps();
+        Schema::create('sale_discount', function (Blueprint $table) {
+            $table->integer('sale_id');
+            $table->integer('discount_id');
         });
     }
 
@@ -29,6 +26,6 @@ class Purchases extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('sale_discount');
     }
 }

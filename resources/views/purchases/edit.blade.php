@@ -4,36 +4,41 @@
 
 @section('container')
 <div class="row">
-    <div class="card">
-        <div class="card-body">
-            <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
-            <hr>
-            <form action="/purchases" method="post">
-                @csrf
-                @method('post')
-                <div class="form-body">
-                    <div class="col-lg-6">
-                        <div class="form-group">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center" style="font-size: 20px">Re-stock Produk</h1>
+                <hr>
+                <form action="/purchases/{{$purchase->id}}" method="post">
+                    @csrf
+                    @method('put')
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-12">
                             <label for="product_id">Produk</label>
-                            <select class="form-control" type="" name="product_id" id="product_id" value="{{$purchase->product_id}}" placeholder="Pilih Produk yang akan dibeli" required>
+                            <select class="form-control" type="" name="product_id" id="product_id"
+                                value="{{$purchase->product_id}}" placeholder="Pilih Produk yang akan dibeli"
+                                required>
                                 @foreach ($products as $product)
                                 <option value="{{$product->id}}">
-                                <b>{{$product->category->name}} {{$product->size->size}}</b>
-                                (Warna: {{$product->color}}, Kedalaman: {{$product->depth}}, Lin: {{$product->lin}})</option>
+                                    <b>{{$product->category->name}} {{$product->size->size}}</b>
+                                    (Warna: {{$product->color}}, Kedalaman: {{$product->depth}}, Lin:
+                                    {{$product->lin}})</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="price">Harga</label>
-                            <input class="form-control" type="text" name="price" id="price" value="{{$purchase->price}}" placeholder="Masukkan Harga Produk" required>
+                        <div class="col-lg-6 col-12">
+                            <label for="price">Harga Satuan</label>
+                            <input class="form-control" type="text" name="price" id="price"
+                                value="{{$purchase->price}}" placeholder="Contoh: 12500" required>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="form-group">
+                    <div class="form-group row">
+                        <div class="col-lg-6 col-12">
                             <label for="quantity">Jumlah</label>
-                            <input class="form-control" type="text" name="quantity" id="quantity" value="{{$purchase->quantity}}" placeholder="Masukkan Jumlah Produk" required>
+                            <input class="form-control" type="text" name="quantity" id="quantity"
+                                value="{{$purchase->quantity}}" placeholder="Contoh: 50" required>
                         </div>
-                        <div class="form-group text-right mt-4">
+                        <div class="col-lg-6 col-12 mt-5">
                             <a href="/products" class="btn btn-warning text-white">
                                 <i class="material-icons">Kembali</i>
                             </a>
@@ -42,8 +47,8 @@
                             </button>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>

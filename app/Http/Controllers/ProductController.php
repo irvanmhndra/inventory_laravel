@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Purchase;
 use App\Sizechart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -17,9 +19,6 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::paginate(10);
-
-        // dd($products);
-
         return \view('products.index', ['products' => $products]);
     }
 

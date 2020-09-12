@@ -10929,7 +10929,7 @@ a.text-dark:focus {
 }
 
 html {
-  height: 100%;
+  height: auto;
   overflow-x: hidden;
   box-sizing: content-box;
   display: block;
@@ -10938,7 +10938,7 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 /*
@@ -10957,6 +10957,10 @@ p {
   font-weight: 300;
   line-height: 1.7em;
   color: #999;
+}
+
+b {
+  font-weight: bold;
 }
 
 i {
@@ -11122,8 +11126,8 @@ a[data-toggle=collapse] {
 
 .content {
   width: 100%;
-  padding: 2em;
-  padding-top: 6em;
+  padding: 1.5rem;
+  padding-top: 5em;
 }
 
 #navbarSupportedContent ul li.nav-item {
@@ -11147,13 +11151,13 @@ a[data-toggle=collapse] {
   }
 
   .navbar {
+    width: 100%;
     display: block;
     background: #6d7fcc;
     margin: 0;
   }
 
   .navbar-header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -11163,7 +11167,7 @@ a[data-toggle=collapse] {
   }
 
   .content {
-    padding: 0;
+    padding: 1rem;
   }
 }
 
@@ -11202,6 +11206,14 @@ th tr td {
 .form-body {
   display: flex;
   box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control {
+  margin-bottom: 1rem;
 }
 
 .main-head {

@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public $timestamps = false;
     protected $table = "products";
 
-    protected $fillable = ['category_id', 'size_id', 'stock', 'color', 'price', 'depth', 'lin'];
+    protected $fillable = ['category_id', 'size_id', 'color', 'price', 'depth', 'lin'];
 
     public function category()
     {
@@ -19,6 +18,11 @@ class Product extends Model
     public function size()
     {
         return $this->belongsTo('App\Sizechart');
+    }
+
+    public function sales()
+    {
+        return $this->hasMany('App\SaleDetail');
     }
 
     public function purchases()
