@@ -9,7 +9,7 @@
             <div class="card-body">
                 <h1 class="text-center" style="font-size: 20px">Tambah Penjualan</h1>
                 <hr>
-                <form action="/sales" method="post">
+                <form action="/sales" method="post" id="form">
                     @csrf
                     @method('post')
                     <div class="form-group row">
@@ -44,30 +44,6 @@
                                 <option value="">Pilih Jenis Pembayaran</option>
                                 <option value="Cash">Cash</option>
                                 <option value="Kredit">Kredit</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="discount">Diskon</label>
-                            <select class="form-control" type="" name="diskon_ids[]" id="diskon" multiple value=""
-                                placeholder="" required>
-                                @foreach ($discounts as $discount)
-                                <option value="{{$discount->id}}">
-                                    {{$discount->name}}: -{{$discount->amount}}%
-                                </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="addon">Addons</label>
-                            <select class="form-control" type="" name="addon_ids[]" id="addon" multiple value=""
-                                placeholder="" required>
-                                @foreach ($addons as $addon)
-                                <option value="{{$addon->id}}">
-                                    {{$addon->name}}: -{{$addon->amount}}
-                                </option>
-                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -108,14 +84,20 @@
                             </select>
                         </div>
                         <div class="col-sm-4">
-                            <label for="packaging">Packaging</label>
-                            <input class="form-control" type="text" name="packaging" id="packaging" value=""
-                                placeholder="Contoh: 25000" required>
+                            <label for="addon">Addons</label>
+                            <select class="form-control" type="" name="addon_ids[]" id="addon" multiple value=""
+                                placeholder="" required>
+                                @foreach ($addons as $addon)
+                                <option value="{{$addon->id}}">
+                                    {{$addon->name}}: -{{$addon->amount}}
+                                </option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="col-sm-4">
                             <label for="packaging">Jumlah yang dibayar</label>
                             <input class="form-control" type="text" name="amount_due" id="amount_due" value=""
-                                placeholder="Contoh: 75000" required>
+                                placeholder="0" required disabled>
                         </div>
                     </div>
 
@@ -146,6 +128,74 @@
             placeholder: "Pilih Addons"
         });
     });
+    
+    var discounts = JSON.parse(JSON.stringify(<?php echo json_encode($discounts); ?>));
+    var products = JSON.parse(JSON.stringify(<?php echo json_encode($products); ?>));
+    var addons = JSON.parse(JSON.stringify(<?php echo json_encode($addons); ?>));
+    $('#form').on('change', function() {
+        refreshData();
+    });
+
+    function refreshData() {
+        var form = $('#form').serializeArray().reduce(function(obj, item) {
+            var name = item.name.replace("[]", "");
+            if ( typeof obj[name] !== "undefined" ) {
+                if ( !Array.isArray(obj[name]) ) {
+                    obj[name] = [ obj[name], item.value ];
+                } else {
+                    obj[name].push(item.value);
+                }
+            } else {
+                obj[name] = item.value;
+            }
+            return obj;
+        }, {});
+        console.log(form)
+        var jumlah = 0;
+        for (let i=0; i<form.product_ids.length; i++) {
+            var product = products.find(function(value) {
+                return value.id == form.product_ids[i];
+            });
+            var amount = form.amounts[i];
+            jumlah += product.price * amount;
+        }
+        var arrDiscount = [];
+        if (Array.isArray(form.discount_ids)) {
+            form.discount_ids.forEach(element => {
+                var discount = discounts.find(function(value) {
+                    return value.id == element;
+                });
+                arrDiscount.push(discount.amount);
+            });
+        } else {
+            var discount = discounts.find(function(value) {
+                return value.id == form.discount_ids;
+            });
+            if (discount != null) {
+                arrDiscount.push(discount.amount);
+            }
+        }
+        arrDiscount.forEach(value => {
+            jumlah = jumlah - (jumlah * value / 100);
+        });
+
+        if (Array.isArray(form.addon_ids)) {
+            form.addon_ids.forEach(element => {
+                var addon = addons.find(function(value) {
+                    return value.id == element;
+                });
+                jumlah += addon.amount;
+            });
+        } else {
+            var addon = addons.find(function(value) {
+                return value.id == form.addon_ids;
+            });
+            if (addon != null) {
+                jumlah += addon.amount;
+            }
+        }
+        $('#amount_due').val(jumlah);
+    }
 
     function addRow() {
         const div = document.createElement('div');
@@ -169,7 +219,7 @@
                     </div>
                     <div class="col-lg-2 col-6">
                         <input type="button" value="+" class="b1 btn btn-primary" onclick="addRow()">
-                        <input type="button" value="-" class="btn btn-danger" onclick="removeRow(this)">
+                        <input type="button" value="-" class="btn btn-danger" onclick="removeRow(this); refreshData();">
                     </div>
                 </div>
             </div>    
