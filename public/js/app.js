@@ -37283,6 +37283,14 @@ $(function () {
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');
   });
+  $('#printInvoice').click(function () {
+    Popup($('.invoice')[0].outerHTML);
+
+    function Popup(data) {
+      window.print();
+      return true;
+    }
+  });
   $('[data-toggle="tooltip"]').tooltip();
   var dropdown = document.getElementsByClassName("dropdown-btn");
   var i;

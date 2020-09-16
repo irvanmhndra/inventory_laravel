@@ -44,6 +44,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/purchases/{id}/delete', 'PurchaseController@destroy');
     Route::get('/addons/{id}/delete', 'AddonController@destroy');
     Route::get('/invoice/{id}/delete', 'InvoiceController@destroy');
+
+    Route::get('/sales/{id}/print', 'SaleController@print');
 });
 
 Auth::routes();

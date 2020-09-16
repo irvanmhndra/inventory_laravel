@@ -151,4 +151,10 @@ class SaleController extends Controller
         $sale->delete();
         return \redirect('sales');
     }
+
+    public function print($id)
+    {
+        $sale = Sale::find($id);
+        return \view('sales.draft', ['sale' => $sale]);
+    }
 }
